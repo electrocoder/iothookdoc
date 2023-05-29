@@ -1,0 +1,44 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="31">
+            <item index="0" class="java.lang.String" itemvalue="psycopg2" />
+            <item index="1" class="java.lang.String" itemvalue="mysqlclient" />
+            <item index="2" class="java.lang.String" itemvalue="backports.zoneinfo" />
+            <item index="3" class="java.lang.String" itemvalue="cryptography" />
+            <item index="4" class="java.lang.String" itemvalue="twisted-iocpsupport" />
+            <item index="5" class="java.lang.String" itemvalue="urllib3" />
+            <item index="6" class="java.lang.String" itemvalue="stomp.py" />
+            <item index="7" class="java.lang.String" itemvalue="sentry-sdk" />
+            <item index="8" class="java.lang.String" itemvalue="Django" />
+            <item index="9" class="java.lang.String" itemvalue="asgiref" />
+            <item index="10" class="java.lang.String" itemvalue="Pillow" />
+            <item index="11" class="java.lang.String" itemvalue="wsgiref" />
+            <item index="12" class="java.lang.String" itemvalue="django-celery-beat" />
+            <item index="13" class="java.lang.String" itemvalue="botocore" />
+            <item index="14" class="java.lang.String" itemvalue="django-celery-results" />
+            <item index="15" class="java.lang.String" itemvalue="phonenumbers" />
+            <item index="16" class="java.lang.String" itemvalue="wrapt" />
+            <item index="17" class="java.lang.String" itemvalue="python-dotenv" />
+            <item index="18" class="java.lang.String" itemvalue="astroid" />
+            <item index="19" class="java.lang.String" itemvalue="django-storages" />
+            <item index="20" class="java.lang.String" itemvalue="python-logstash-async" />
+            <item index="21" class="java.lang.String" itemvalue="websocket-client" />
+            <item index="22" class="java.lang.String" itemvalue="opencensus-ext-azure" />
+            <item index="23" class="java.lang.String" itemvalue="boto3" />
+            <item index="24" class="java.lang.String" itemvalue="XlsxWriter" />
+            <item index="25" class="java.lang.String" itemvalue="paramiko" />
+            <item index="26" class="java.lang.String" itemvalue="pylint" />
+            <item index="27" class="java.lang.String" itemvalue="django-cors-headers" />
+            <item index="28" class="java.lang.String" itemvalue="python-logstash" />
+            <item index="29" class="java.lang.String" itemvalue="paho-mqtt" />
+            <item index="30" class="java.lang.String" itemvalue="ecs-logging" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
