@@ -1,6 +1,4 @@
-# Configuration file for the Sphinx documentation builder.
-
-# -- Project information
+# 30.05.2023
 
 project = 'iothook'
 copyright = '2023, iothook'
@@ -29,7 +27,12 @@ templates_path = ['_templates']
 
 # -- Options for HTML output
 
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'bizstyle'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+master_doc = 'index'
+
+language = 'en'
+
