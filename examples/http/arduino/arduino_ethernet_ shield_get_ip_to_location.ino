@@ -82,7 +82,7 @@ void httpRequest() {
   if (client.connect(server, 80)) {
     Serial.println("connecting...");
 
-    client.println("GET /api/find-ip-address/ HTTP/1.1");
+    client.println("GET /api/get-ip-to-location-address/ HTTP/1.1");
     client.println("Host: www.iothook.com");
     client.println("User-Agent: arduino-ethernet");
     client.println("Connection: close");
