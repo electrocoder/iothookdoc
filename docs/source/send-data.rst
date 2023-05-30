@@ -1180,3 +1180,6 @@ Bu örnekde NodeJS Native metodu kullanarak veri gönderme örneği verilmiştir
 
     Response response = client.newCall(request).execute();
 
+MQTT Send Data
+**************
+
