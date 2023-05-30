@@ -7,7 +7,7 @@ Welcome to IoThook's documentation!
 ===================================
 
 .. toctree::
-   :maxdepth: 10
+   :maxdepth: 30
    :caption: Contents:
 
    what-is-iot.rst
@@ -16,3 +16,4 @@ Welcome to IoThook's documentation!
    create-new-device.rst
    send-data.rst
    read-data.rst
+   how-to-find-iot-device-ip-address.rst
