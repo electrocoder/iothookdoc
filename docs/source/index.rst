@@ -17,3 +17,4 @@ IoThook IoT Device Dashboard
    send-data.rst
    read-data.rst
    how-to-find-iot-device-ip-address.rst
+   get-ip-to-location-address.rst
