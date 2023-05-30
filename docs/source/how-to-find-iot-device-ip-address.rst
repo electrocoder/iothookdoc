@@ -34,6 +34,8 @@ To find the IP address of the IoT device, you need to send a GET request from yo
 You can find the IoT IP address by making a GET request to https://iothook.com/api/find-ip-address/ or
 http://iothook.com/api/find-ip-address/
 
+When IoTHook requests a GET, it can sample the IP address from JSON format as follows. {"ip":"184.53.56.28"}
+
 .. code-block:: c
 
     /*
