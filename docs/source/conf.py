@@ -36,3 +36,19 @@ master_doc = 'index'
 
 language = 'en'
 
+html_static_path = ['_static']
+
+html_title = 'IoTHook IoT Internet Of Things Arduino, ESP, Raspberry Pi'
+
+html_short_title = html_title
+
+html_logo = '_static/internet-of-things.png'
+
+html_favicon = '_static/internet-of-things.png'
+
+html_show_sourcelink = True
+
+html_sidebars = {
+   '**': ['globaltoc.html', 'sourcelink.html', 'searchbox.html'],
+   'using/windows': ['windowssidebar.html', 'searchbox.html'],
+}
