@@ -72,6 +72,10 @@ and able to communicate with other devices. It also simplifies device discovery,
 You can find the IoT IP address by making a GET request to <a class="reference external" href="https://iothook.com/api/find-ip-address/">https://iothook.com/api/find-ip-address/</a> or
 <a class="reference external" href="http://iothook.com/api/find-ip-address/">http://iothook.com/api/find-ip-address/</a> .</p>
 <p>When IoTHook requests a GET, it can sample the IP address from JSON format as follows. {“ip”:”184.53.56.28”}</p>
+<section id="iothook-iot-device-get-global-ip-address-api-arduino-ethernet-shield">
+<h3>IoTHook IoT Device Get Global IP Address API Arduino Ethernet Shield<a class="headerlink" href="#iothook-iot-device-get-global-ip-address-api-arduino-ethernet-shield" title="Permalink to this heading">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="arduino-ethernet-shield-get-ip-ino">
+<div class="code-block-caption"><span class="caption-text">arduino_ethernet_shield_get_ip.ino</span><a class="headerlink" href="#arduino-ethernet-shield-get-ip-ino" title="Permalink to this code">¶</a></div>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
 
 <span class="cm">  IoT Device Find Global IP Address</span>
@@ -156,7 +160,7 @@ You can find the IoT IP address by making a GET request to <a class="reference e
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">client</span><span class="p">.</span><span class="n">connect</span><span class="p">(</span><span class="n">server</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;connecting...&quot;</span><span class="p">);</span>
 
-<span class="w">    </span><span class="n">client</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;GET api/find-ip-address/ HTTP/1.1&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">client</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;GET /api/find-ip-address/ HTTP/1.1&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="n">client</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Host: www.iothook.com&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="n">client</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;User-Agent: arduino-ethernet&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="n">client</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Connection: close&quot;</span><span class="p">);</span>
@@ -170,6 +174,8 @@ You can find the IoT IP address by making a GET request to <a class="reference e
 <span class="p">}</span>
 </pre></div>
 </div>
+</div>
+</section>
 </section>
 </section>
 
@@ -193,7 +199,10 @@ You can find the IoT IP address by making a GET request to <a class="reference e
 <li class="toctree-l1"><a class="reference internal" href="send-data.html">Send Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="read-data.html">Read Data</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">How to Find IoT Device IP Address</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#iothook-iot-device-get-global-ip-address-api">IoTHook IoT Device Get Global IP Address API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#iothook-iot-device-get-global-ip-address-api">IoTHook IoT Device Get Global IP Address API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#iothook-iot-device-get-global-ip-address-api-arduino-ethernet-shield">IoTHook IoT Device Get Global IP Address API Arduino Ethernet Shield</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="get-ip-to-location-address.html">Finding location from IoT Device IP address</a></li>
