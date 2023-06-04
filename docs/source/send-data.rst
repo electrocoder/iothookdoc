@@ -46,6 +46,7 @@ You can find this example and others at `IoT Examples Github <https://github.com
 .. highlight:: py
 .. literalinclude:: /../../examples/http/python/iot_post_json_update_post_1.py
     :caption: iot_post_json_update_post_1.py
+    :name: iot_post_json_update_post_1.py
 
 Send JSON Data in POST with Python Examples 2:
 ----------------------------------------------
@@ -59,6 +60,7 @@ You can find this example and others at `IoT Examples Json Post 1 Github <https:
 .. highlight:: py
 .. literalinclude:: /../../examples/http/python/iot_post_json_update_post_2.py
     :caption: iot_post_json_update_post_2.py
+    :name: iot_post_json_update_post_2.py
 
 Send JSON Data in POST with Python Examples 3:
 ----------------------------------------------
@@ -72,6 +74,7 @@ You can find this example and others at `IoT Examples Json Update 2 Github <http
 .. highlight:: py
 .. literalinclude:: /../../examples/http/python/iot_post_json_update_post_3.py
     :caption: iot_post_json_update_post_3.py
+    :name: iot_post_json_update_post_3.py
 
 Send Data in GET with Python
 ============================
@@ -108,6 +111,7 @@ You can find this example and others at `IoT Examples Get Write Github <https://
 .. highlight:: py
 .. literalinclude:: /../../examples/http/python/iot_get_write_1.py
     :caption: iot_get_write_1.py
+    :name: iot_get_write_1.py
 
 Send Data in GET with Python Examples 2:
 ----------------------------------------
@@ -121,6 +125,7 @@ You can find this example and others at `IoT Examples Get Write 1 Github <https:
 .. highlight:: py
 .. literalinclude:: /../../examples/http/python/iot_get_write_2.py
     :caption: iot_get_write_2.py
+    :name: iot_get_write_2.py
 
 Arduino and ESP8266
 ===================
@@ -137,6 +142,7 @@ You can find this example and others at `IoT Examples ESP8266 Post Github <https
 .. highlight:: c
 .. literalinclude:: /../../examples/http/arduino/esp8266/arduino_esp8266_post_send_data.ino
     :caption: arduino_esp8266_post_send_data.ino
+    :name: arduino_esp8266_post_send_data.ino
 
 Arduino and ESP8266 HTTP POST Send Data 2
 -----------------------------------------
@@ -150,6 +156,7 @@ You can find this example and others at `IoT Examples ESP8266 Post Send Github <
 .. highlight:: c
 .. literalinclude:: /../../examples/http/arduino/esp8266/arduino_esp8266_post_send_data_2.ino
     :caption: arduino_esp8266_post_send_data_2.ino
+    :name: arduino_esp8266_post_send_data_2.ino
 
 Arduino, ESP8266, Nodemcu Send Data in GET
 ==========================================
@@ -163,6 +170,7 @@ Here is an example of sending data using the Get method with Arduino, ESP8266, N
 .. highlight:: c
 .. literalinclude:: /../../examples/http/arduino/arduino_nodemcu_esp8266_temp_hum_send_data.ino
     :caption: arduino_nodemcu_esp8266_temp_hum_send_data.ino
+    :name: arduino_nodemcu_esp8266_temp_hum_send_data.ino
 
 NodeMCU Send Data in GET
 ========================
@@ -176,6 +184,7 @@ Here is an example of sending data using the Get method with NodeMCU:
 .. highlight:: c
 .. literalinclude:: /../../examples/http/nodemcu/nodemcu_send_data_get.ino
     :caption: nodemcu_send_data_get.ino
+    :name: nodemcu_send_data_get.ino
 
 GO Send Data in GET
 ===================
@@ -192,6 +201,7 @@ Go Language Send Data with GET Method
 .. highlight:: go
 .. literalinclude:: /../../examples/http/go/send_data_in_get.go
     :caption: send_data_in_get.go
+    :name: send_data_in_get.go
 
 Go Language Send Data with GET Method 2
 ---------------------------------------
@@ -199,6 +209,7 @@ Go Language Send Data with GET Method 2
 .. highlight:: go
 .. literalinclude:: /../../examples/http/go/send_data_in_get_2.go
     :caption: send_data_in_get_2.go
+    :name: send_data_in_get_2.go
 
 PHP Send Data in GET
 ====================
@@ -212,6 +223,7 @@ Here is an example of sending data using the Get method with PHP Lang.:
 .. highlight:: php
 .. literalinclude:: /../../examples/http/php/send_data_in_get.php
     :caption: send_data_in_get.php
+    :name: send_data_in_get.php
 
 NodeJS Send Data in GET
 =======================
