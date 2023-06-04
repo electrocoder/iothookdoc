@@ -3,7 +3,7 @@
 
   IoThook'da her cihazin bir kimlik numarasi APIKEY'i vardir.
   Bu APIKEY kullanilarak veriler IoThook'a POST metodu ile gonderilir.
-  1000 kere 15 saniyede bir random verileri iothook'a gonderir.
+  100 kere 15 saniyede bir random verileri iothook'a gonderir.
 
   Bu ornek IotHook servisine veri almak/gondermek icin baslangic seviyesinde
   testlerin yapilmasini amaclamaktadir.
@@ -48,7 +48,7 @@ headers = {'Content-type': 'application/json'}
 API_KEY = '21579c1e874fda7276d94f3c'  # write api key
 url = 'http://iothook.com/api/update/'
 
-for i in range(1000):
+for i in range(100):
     data = {  # write api key
         'api_key': API_KEY,  # demo hesap #650 - iot_examples
         'field_1': random.randint(1, 10),

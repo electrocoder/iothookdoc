@@ -78,39 +78,41 @@ Python. When the data is sent successfully, Json REST output of the data is rece
 <figure class="align-center">
 <img alt="python-send-data.png" src="_images/python-send-data.png" />
 </figure>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Python ile IoThook REST Api Testi</span>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">iot_post_json_update_post_1.py</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  Python ile IoThook REST Api Testi</span>
 
-<span class="sd">IoThook&#39;da her cihazin bir kimlik numarasi APIKEY&#39;i vardir.</span>
-<span class="sd">Bu APIKEY kullanilarak veriler IoThook&#39;a POST metodu ile gonderilir.</span>
-<span class="sd">5 kere 15 saniyede bir random verileri iothook&#39;a gonderir.</span>
+<span class="sd">  IoThook&#39;da her cihazin bir kimlik numarasi APIKEY&#39;i vardir.</span>
+<span class="sd">  Bu APIKEY kullanilarak veriler IoThook&#39;a POST metodu ile gonderilir.</span>
+<span class="sd">  5 kere 15 saniyede bir random verileri iothook&#39;a gonderir.</span>
 
-<span class="sd">Bu ornek IotHook servisine veri almak/gondermek icin baslangic seviyesinde</span>
-<span class="sd">testlerin yapilmasini amaclamaktadir.</span>
+<span class="sd">  Bu ornek IotHook servisine veri almak/gondermek icin baslangic seviyesinde</span>
+<span class="sd">  testlerin yapilmasini amaclamaktadir.</span>
 
-<span class="sd">v1 : 11 Eylul 2017</span>
-<span class="sd">v2 : 19 Agustos 2019</span>
-<span class="sd">v3 : 31 Ekim 2022</span>
+<span class="sd">  v1 : 11 Eylul 2017</span>
+<span class="sd">  v2 : 19 Agustos 2019</span>
+<span class="sd">  v3 : 31 Ekim 2022</span>
 
-<span class="sd">Sahin MERSIN - electrocoder</span>
+<span class="sd">  Sahin MERSIN - electrocoder</span>
 
-<span class="sd">Daha fazlasi icin</span>
+<span class="sd">  Daha fazlasi icin</span>
 
-<span class="sd">http://www.iothook.com</span>
-<span class="sd">https://www.mesebilisim.com</span>
-<span class="sd">https://mesemekatronik.com</span>
-<span class="sd">https://electrocoder.blogspot.com</span>
-<span class="sd">https://github.com/meseiot/iotexamples</span>
+<span class="sd">  http://www.iothook.com</span>
+<span class="sd">  https://www.mesebilisim.com</span>
+<span class="sd">  https://mesemekatronik.com</span>
+<span class="sd">  https://electrocoder.blogspot.com</span>
+<span class="sd">  https://github.com/meseiot/iotexamples</span>
 
-<span class="sd">sitelerine gidiniz.</span>
+<span class="sd">  sitelerine gidiniz.</span>
 
-<span class="sd">Yayin : http://mesebilisim.com</span>
+<span class="sd">  Yayin : http://mesebilisim.com</span>
 
-<span class="sd">Licensed under the Apache License, Version 2.0 (the &quot;License&quot;).</span>
-<span class="sd">You may not use this file except in compliance with the License.</span>
-<span class="sd">A copy of the License is located at</span>
+<span class="sd">  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;).</span>
+<span class="sd">  You may not use this file except in compliance with the License.</span>
+<span class="sd">  A copy of the License is located at</span>
 
-<span class="sd">http://www.apache.org/licenses/</span>
+<span class="sd">  http://www.apache.org/licenses/</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="kn">import</span> <span class="nn">json</span>
@@ -129,18 +131,19 @@ Python. When the data is sent successfully, Json REST output of the data is rece
 <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://iothook.com/api/update/&#39;</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>  <span class="c1"># write api key</span>
-    <span class="s1">&#39;api_key&#39;</span><span class="p">:</span> <span class="n">API_KEY</span><span class="p">,</span>  <span class="c1"># demo hesap #650 - iot_examples</span>
-    <span class="s1">&#39;field_1&#39;</span><span class="p">:</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
-    <span class="s1">&#39;field_2&#39;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">),</span> <span class="mi">2</span><span class="p">),</span>
-<span class="p">}</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>  <span class="c1"># write api key</span>
+        <span class="s1">&#39;api_key&#39;</span><span class="p">:</span> <span class="n">API_KEY</span><span class="p">,</span>  <span class="c1"># demo hesap #650 - iot_examples</span>
+        <span class="s1">&#39;field_1&#39;</span><span class="p">:</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+        <span class="s1">&#39;field_2&#39;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">),</span> <span class="mi">2</span><span class="p">),</span>
+    <span class="p">}</span>
 
-<span class="n">data_json</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">data_json</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
-<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data_json</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
-<span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
-<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data_json</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+    <span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
 </pre></div>
+</div>
 </div>
 </section>
 <section id="send-json-data-in-post-with-python-examples-2">
@@ -149,39 +152,41 @@ Python. When the data is sent successfully, Json REST output of the data is rece
 <figure class="align-center">
 <img alt="python-send-data.png" src="_images/python-send-data.png" />
 </figure>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Python ile IoThook REST Api Testi</span>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">iot_post_json_update_post_2.py</span><a class="headerlink" href="#id11" title="Permalink to this code">¶</a></div>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  Python ile IoThook REST Api Testi</span>
 
-<span class="sd">IoThook&#39;da her cihazin bir kimlik numarasi APIKEY&#39;i vardir.</span>
-<span class="sd">Bu APIKEY kullanilarak veriler IoThook&#39;a POST metodu ile gonderilir.</span>
-<span class="sd">100 kere 15 saniyede bir random verileri iothook&#39;a gonderir.</span>
+<span class="sd">  IoThook&#39;da her cihazin bir kimlik numarasi APIKEY&#39;i vardir.</span>
+<span class="sd">  Bu APIKEY kullanilarak veriler IoThook&#39;a POST metodu ile gonderilir.</span>
+<span class="sd">  100 kere 15 saniyede bir random verileri iothook&#39;a gonderir.</span>
 
-<span class="sd">Bu ornek IotHook servisine veri almak/gondermek icin baslangic seviyesinde</span>
-<span class="sd">testlerin yapilmasini amaclamaktadir.</span>
+<span class="sd">  Bu ornek IotHook servisine veri almak/gondermek icin baslangic seviyesinde</span>
+<span class="sd">  testlerin yapilmasini amaclamaktadir.</span>
 
-<span class="sd">v1 : 11 Eylul 2017</span>
-<span class="sd">v2 : 19 Agustos 2019</span>
-<span class="sd">v3 : 31 Ekim 2022</span>
+<span class="sd">  v1 : 11 Eylul 2017</span>
+<span class="sd">  v2 : 19 Agustos 2019</span>
+<span class="sd">  v3 : 31 Ekim 2022</span>
 
-<span class="sd">Sahin MERSIN - electrocoder</span>
+<span class="sd">  Sahin MERSIN - electrocoder</span>
 
-<span class="sd">Daha fazlasi icin</span>
+<span class="sd">  Daha fazlasi icin</span>
 
-<span class="sd">http://www.iothook.com</span>
-<span class="sd">https://www.mesebilisim.com</span>
-<span class="sd">https://mesemekatronik.com</span>
-<span class="sd">https://electrocoder.blogspot.com</span>
-<span class="sd">https://github.com/meseiot/iotexamples</span>
+<span class="sd">  http://www.iothook.com</span>
+<span class="sd">  https://www.mesebilisim.com</span>
+<span class="sd">  https://mesemekatronik.com</span>
+<span class="sd">  https://electrocoder.blogspot.com</span>
+<span class="sd">  https://github.com/meseiot/iotexamples</span>
 
-<span class="sd">sitelerine gidiniz.</span>
+<span class="sd">  sitelerine gidiniz.</span>
 
-<span class="sd">Yayin : http://mesebilisim.com</span>
+<span class="sd">  Yayin : http://mesebilisim.com</span>
 
-<span class="sd">Licensed under the Apache License, Version 2.0 (the &quot;License&quot;).</span>
-<span class="sd">You may not use this file except in compliance with the License.</span>
-<span class="sd">A copy of the License is located at</span>
+<span class="sd">  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;).</span>
+<span class="sd">  You may not use this file except in compliance with the License.</span>
+<span class="sd">  A copy of the License is located at</span>
 
-<span class="sd">http://www.apache.org/licenses/</span>
+<span class="sd">  http://www.apache.org/licenses/</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="kn">import</span> <span class="nn">json</span>
@@ -213,6 +218,7 @@ Python. When the data is sent successfully, Json REST output of the data is rece
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
 </section>
 <section id="send-json-data-in-post-with-python-examples-3">
 <h4>Send JSON Data in POST with Python Examples 3:<a class="headerlink" href="#send-json-data-in-post-with-python-examples-3" title="Permalink to this heading">¶</a></h4>
@@ -220,29 +226,41 @@ Python. When the data is sent successfully, Json REST output of the data is rece
 <figure class="align-center">
 <img alt="python-send-data.png" src="_images/python-send-data.png" />
 </figure>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Python ile IoThook REST Api Testi</span>
-<span class="sd">IoThook&#39;da her cihazin bir kimlik numarasi APIKEY&#39;i vardir.</span>
-<span class="sd">Bu APIKEY kullanilarak veriler IoThook&#39;a POST metodu ile gonderilir.</span>
-<span class="sd">1000 kere 15 saniyede bir random verileri iothook&#39;a gonderir.</span>
-<span class="sd">Bu ornek IotHook servisine veri almak/gondermek icin baslangic seviyesinde</span>
-<span class="sd">testlerin yapilmasini amaclamaktadir.</span>
-<span class="sd">v1 : 11 Eylul 2017</span>
-<span class="sd">v2 : 19 Agustos 2019</span>
-<span class="sd">v3 : 31 Ekim 2022</span>
-<span class="sd">Sahin MERSIN - electrocoder</span>
-<span class="sd">Daha fazlasi icin</span>
-<span class="sd">http://www.iothook.com</span>
-<span class="sd">https://www.mesebilisim.com</span>
-<span class="sd">https://mesemekatronik.com</span>
-<span class="sd">https://electrocoder.blogspot.com</span>
-<span class="sd">https://github.com/meseiot/iotexamples</span>
-<span class="sd">sitelerine gidiniz.</span>
-<span class="sd">Yayin : http://mesebilisim.com</span>
-<span class="sd">Licensed under the Apache License, Version 2.0 (the &quot;License&quot;).</span>
-<span class="sd">You may not use this file except in compliance with the License.</span>
-<span class="sd">A copy of the License is located at</span>
-<span class="sd">http://www.apache.org/licenses/</span>
+<div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-text">iot_post_json_update_post_3.py</span><a class="headerlink" href="#id12" title="Permalink to this code">¶</a></div>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  Python ile IoThook REST Api Testi</span>
+
+<span class="sd">  IoThook&#39;da her cihazin bir kimlik numarasi APIKEY&#39;i vardir.</span>
+<span class="sd">  Bu APIKEY kullanilarak veriler IoThook&#39;a POST metodu ile gonderilir.</span>
+<span class="sd">  1000 kere 15 saniyede bir random verileri iothook&#39;a gonderir.</span>
+
+<span class="sd">  Bu ornek IotHook servisine veri almak/gondermek icin baslangic seviyesinde</span>
+<span class="sd">  testlerin yapilmasini amaclamaktadir.</span>
+
+<span class="sd">  v1 : 11 Eylul 2017</span>
+<span class="sd">  v2 : 19 Agustos 2019</span>
+<span class="sd">  v3 : 31 Ekim 2022</span>
+
+<span class="sd">  Sahin MERSIN - electrocoder</span>
+
+<span class="sd">  Daha fazlasi icin</span>
+
+<span class="sd">  http://www.iothook.com</span>
+<span class="sd">  https://www.mesebilisim.com</span>
+<span class="sd">  https://mesemekatronik.com</span>
+<span class="sd">  https://electrocoder.blogspot.com</span>
+<span class="sd">  https://github.com/meseiot/iotexamples</span>
+
+<span class="sd">  sitelerine gidiniz.</span>
+
+<span class="sd">  Yayin : http://mesebilisim.com</span>
+
+<span class="sd">  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;).</span>
+<span class="sd">  You may not use this file except in compliance with the License.</span>
+<span class="sd">  A copy of the License is located at</span>
+
+<span class="sd">  http://www.apache.org/licenses/</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="kn">import</span> <span class="nn">json</span>
@@ -273,6 +291,7 @@ Python. When the data is sent successfully, Json REST output of the data is rece
     <span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
 </pre></div>
+</div>
 </div>
 </section>
 </section>
@@ -973,8 +992,8 @@ In the example, random numbers between 0-100 were generated and the device was s
 <p>With the IOThook Api v1.4 update, it allows sending data with the GET method.</p>
 <p>You can find this example and others at <a class="reference external" href="https://github.com/electrocoder/IoThook">IOTHOOK Git</a></p>
 <p>Here is an example of sending data using the Get method with NodeMCU:</p>
-<div class="literal-block-wrapper docutils container" id="id10">
-<div class="code-block-caption"><span class="caption-text">nodemcu_send_data_get.ino</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text">nodemcu_send_data_get.ino</span><a class="headerlink" href="#id13" title="Permalink to this code">¶</a></div>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// 04.05.2023</span>
 <span class="c1">// NodeMCU Send Data GET Method</span>
 <span class="c1">// NodeMCU ESP8266</span>
