@@ -453,7 +453,237 @@ sitelerinden faydalandım. Bu sitelerde daha fazla kaynak bulabilirsiniz.</p>
 </dl>
 <p>Bu örneğe ve diğerlerine <a class="reference external" href="https://github.com/electrocoder/IOThook/tree/master/examples/">IOTHOOK Git</a> sayfasından ulaşabilirsiniz.</p>
 <p>iothook.ui dosyası:</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">iothook.ui</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;ui</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;4.0&quot;</span><span class="nt">&gt;</span>
+<span class="w"> </span><span class="nt">&lt;class&gt;</span>Form<span class="nt">&lt;/class&gt;</span>
+<span class="w"> </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QWidget&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Form&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;geometry&quot;</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="nt">&lt;rect&gt;</span>
+<span class="w">    </span><span class="nt">&lt;x&gt;</span>0<span class="nt">&lt;/x&gt;</span>
+<span class="w">    </span><span class="nt">&lt;y&gt;</span>0<span class="nt">&lt;/y&gt;</span>
+<span class="w">    </span><span class="nt">&lt;width&gt;</span>689<span class="nt">&lt;/width&gt;</span>
+<span class="w">    </span><span class="nt">&lt;height&gt;</span>553<span class="nt">&lt;/height&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/rect&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">  </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;windowTitle&quot;</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="nt">&lt;string&gt;</span>Form<span class="nt">&lt;/string&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">  </span><span class="nt">&lt;layout</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QGridLayout&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;gridLayout&quot;</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="nt">&lt;item</span><span class="w"> </span><span class="na">row=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">column=</span><span class="s">&quot;0&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QLabel&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;label&quot;</span><span class="nt">&gt;</span>
+<span class="w">     </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;string&gt;</span>Read<span class="w"> </span>API<span class="w"> </span>KEY<span class="nt">&lt;/string&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">   </span><span class="nt">&lt;item</span><span class="w"> </span><span class="na">row=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">column=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QLineEdit&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;lineEdit&quot;</span><span class="nt">/&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">   </span><span class="nt">&lt;item</span><span class="w"> </span><span class="na">row=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">column=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QPushButton&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;pushButton&quot;</span><span class="nt">&gt;</span>
+<span class="w">     </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;string&gt;</span>Connect<span class="nt">&lt;/string&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">   </span><span class="nt">&lt;item</span><span class="w"> </span><span class="na">row=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">column=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">colspan=</span><span class="s">&quot;3&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;MplWidget&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MplWidget&quot;</span><span class="w"> </span><span class="na">native=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/layout&gt;</span>
+<span class="w"> </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w"> </span><span class="nt">&lt;customwidgets&gt;</span>
+<span class="w">  </span><span class="nt">&lt;customwidget&gt;</span>
+<span class="w">   </span><span class="nt">&lt;class&gt;</span>MplWidget<span class="nt">&lt;/class&gt;</span>
+<span class="w">   </span><span class="nt">&lt;extends&gt;</span>QWidget<span class="nt">&lt;/extends&gt;</span>
+<span class="w">   </span><span class="nt">&lt;header&gt;</span>mplwidget.h<span class="nt">&lt;/header&gt;</span>
+<span class="w">   </span><span class="nt">&lt;container&gt;</span>1<span class="nt">&lt;/container&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/customwidget&gt;</span>
+<span class="w"> </span><span class="nt">&lt;/customwidgets&gt;</span>
+<span class="w"> </span><span class="nt">&lt;resources/&gt;</span>
+<span class="w"> </span><span class="nt">&lt;connections/&gt;</span>
+<span class="nt">&lt;/ui&gt;</span>
+</pre></div>
+</div>
+</div>
 <p>iothook.py dosyası:</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">iothook.py</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  Python ile IoThook REST Api Testi</span>
+
+<span class="sd">  IoThook&#39;da her cihazin bir kimlik numarasi APIKEY&#39;i vardir.</span>
+<span class="sd">  Bu APIKEY kullanilarak veriler IoThook&#39;a GET metodu gonderilir ve cihaz detay verileri alinir.</span>
+<span class="sd">  PySide2 ile arayuz olusturulmustur.</span>
+
+<span class="sd">  Bu ornek IotHook servisine veri almak/gondermek icin baslangic seviyesinde</span>
+<span class="sd">  testlerin yapilmasini amaclamaktadir.</span>
+
+<span class="sd">  v1 : 19 Agustos 2019</span>
+<span class="sd">  v2 : 31 Ekim 2022</span>
+
+<span class="sd">  Sahin MERSIN - electrocoder</span>
+
+<span class="sd">  Daha fazlasi icin</span>
+
+<span class="sd">  http://www.iothook.com</span>
+<span class="sd">  https://www.mesebilisim.com</span>
+<span class="sd">  https://mesemekatronik.com</span>
+<span class="sd">  https://electrocoder.blogspot.com</span>
+<span class="sd">  https://github.com/meseiot/iotexamples</span>
+
+<span class="sd">  sitelerine gidiniz.</span>
+
+<span class="sd">  Yayin : http://mesebilisim.com</span>
+
+<span class="sd">  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;).</span>
+<span class="sd">  You may not use this file except in compliance with the License.</span>
+<span class="sd">  A copy of the License is located at</span>
+
+<span class="sd">  http://www.apache.org/licenses/</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">PySide2.QtWidgets</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">PySide2.QtUiTools</span> <span class="kn">import</span> <span class="n">QUiLoader</span>
+<span class="kn">from</span> <span class="nn">PySide2.QtCore</span> <span class="kn">import</span> <span class="n">QFile</span><span class="p">,</span> <span class="n">QTimer</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib.backends.backend_qt5agg</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">FigureCanvas</span><span class="p">,</span> <span class="n">NavigationToolbar2QT</span> <span class="k">as</span> <span class="n">NavigationToolbar</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib.figure</span> <span class="kn">import</span> <span class="n">Figure</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+
+<span class="k">class</span> <span class="nc">MplWidget</span><span class="p">(</span><span class="n">QWidget</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">QWidget</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span> <span class="o">=</span> <span class="n">FigureCanvas</span><span class="p">(</span><span class="n">Figure</span><span class="p">())</span>
+
+        <span class="n">vertical_layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
+        <span class="n">vertical_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="p">)</span>
+        <span class="n">vertical_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">NavigationToolbar</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="p">,</span> <span class="bp">self</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">axes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">figure</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">vertical_layout</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">MainWidget</span><span class="p">(</span><span class="n">QWidget</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">QWidget</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="n">designer_file</span> <span class="o">=</span> <span class="n">QFile</span><span class="p">(</span><span class="s2">&quot;iothook.ui&quot;</span><span class="p">)</span>
+        <span class="n">designer_file</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">QFile</span><span class="o">.</span><span class="n">ReadOnly</span><span class="p">)</span>
+        <span class="n">loader</span> <span class="o">=</span> <span class="n">QUiLoader</span><span class="p">()</span>
+        <span class="n">loader</span><span class="o">.</span><span class="n">registerCustomWidget</span><span class="p">(</span><span class="n">MplWidget</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">designer_file</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+        <span class="n">designer_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;IOTHOOK&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">field_1_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">field_2_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">field_3_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">field_4_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">field_5_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">field_6_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">field_7_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">field_8_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">lineEdit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">findChild</span><span class="p">(</span><span class="n">QLineEdit</span><span class="p">,</span> <span class="s1">&#39;lineEdit&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pushButton</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">findChild</span><span class="p">(</span><span class="n">QPushButton</span><span class="p">,</span> <span class="s1">&#39;pushButton&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">pushButton</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="p">)</span>
+
+        <span class="n">grid_layout</span> <span class="o">=</span> <span class="n">QGridLayout</span><span class="p">()</span>
+        <span class="n">grid_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">grid_layout</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">result</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timer</span> <span class="o">=</span> <span class="n">QTimer</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">setInterval</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">timeout</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">status</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;update&quot;</span><span class="p">)</span>
+        <span class="c1"># demo account API_KEY</span>
+        <span class="c1"># https://iothook.com/en/device/data/650/</span>
+        <span class="c1"># 650 - iot_examples</span>
+        <span class="c1"># API_KEY = &#39;f1403e03949c7f9060a4bdd2&#39;  # read api key</span>
+        <span class="n">API_KEY</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lineEdit</span><span class="o">.</span><span class="n">text</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">API_KEY</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pushButton</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s2">&quot;Stop&quot;</span><span class="p">)</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://iothook.com/api/device/?api_key=&#39;</span> <span class="o">+</span> <span class="n">API_KEY</span> <span class="o">+</span> <span class="s2">&quot;&amp;results=1&quot;</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">MplWidget</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">field_title_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+                <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;field_1&#39;</span><span class="p">]:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">field_title_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;field_1&#39;</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">field_1_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;field_1&#39;</span><span class="p">])</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">MplWidget</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">field_1_list</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;field_2&#39;</span><span class="p">]:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">field_title_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;field_2&#39;</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">field_2_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;field_2&#39;</span><span class="p">])</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">MplWidget</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">field_2_list</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;field_3&#39;</span><span class="p">]:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">field_title_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;field_3&#39;</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">field_3_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;field_3&#39;</span><span class="p">])</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">MplWidget</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">field_3_list</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;field_4&#39;</span><span class="p">]:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">field_title_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;field_4&#39;</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">field_4_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;field_4&#39;</span><span class="p">])</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">MplWidget</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">field_4_list</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;field_5&#39;</span><span class="p">]:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">field_title_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;field_5&#39;</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">field_5_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;field_5&#39;</span><span class="p">])</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">MplWidget</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">field_5_list</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;field_6&#39;</span><span class="p">]:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">field_title_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;field_6&#39;</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">field_6_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;field_6&#39;</span><span class="p">])</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">MplWidget</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">field_6_list</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;field_7&#39;</span><span class="p">]:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">field_title_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;field_7&#39;</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">field_7_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;field_7&#39;</span><span class="p">])</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">MplWidget</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">field_7_list</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;field_8&#39;</span><span class="p">]:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">field_title_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;field_8&#39;</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">field_8_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;field_8&#39;</span><span class="p">])</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">MplWidget</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">field_8_list</span><span class="p">)</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">MplWidget</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">legend</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">field_title_list</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">MplWidget</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">repaint</span><span class="p">()</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="k">pass</span>
+
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">([])</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">MainWidget</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
 </section>
 </section>
 

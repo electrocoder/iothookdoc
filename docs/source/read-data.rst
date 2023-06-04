@@ -459,16 +459,15 @@ Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
 
 iothook.ui dosyası:
 
-.. literalinclude:: examples/python/pyside2/iothook.ui
+.. highlight:: xml
+.. literalinclude:: /../../examples/http/python/pyside2/iothook.ui
     :caption: iothook.ui
-    :name: iothook.ui
-
 
 iothook.py dosyası:
 
-.. literalinclude:: examples/python/pyside2/iothook.py
+.. highlight:: python
+.. literalinclude:: /../../examples/http/python/pyside2/iothook.py
     :caption: iothook.py
-    :name: iothook.py
 
 
 
