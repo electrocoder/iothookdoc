@@ -771,14 +771,14 @@ You can find this example and others at `IoT Examples ESP8266 Post Send Github <
     }
 
 
-Arduino, ESP8266, Nodemcu GET Metodu ile Veri Gönderme
-======================================================
+Arduino, ESP8266, Nodemcu Send Data in GET
+==========================================
 
 With the IOThook Api v1.4 update, it allows sending data with the GET method.
 
 You can find this example and others at `IOTHOOK Git <https://github.com/electrocoder/IoThook>`_
 
-Here is an example of sending data using the Get method with NodeMCU:
+Here is an example of sending data using the Get method with Arduino, ESP8266, NodeMCU:
 
 .. code-block:: c
 
@@ -967,11 +967,11 @@ Here is an example of sending data using the Get method with NodeMCU:
 NodeMCU Send Data in GET
 ========================
 
-IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.
+With the IOThook Api v1.4 update, it allows sending data with the GET method.
 
-Bu örneğe ve diğerlerine `IOTHOOK Git <https://github.com/electrocoder/IoThook>`_ sayfasından ulaşabilirsiniz.
+You can find this example and others at `IOTHOOK Git <https://github.com/electrocoder/IoThook>`_
 
-Bu örnekde C dili ile ile Get metodu kullanarak veri gönderme örneği verilmiştir:
+Here is an example of sending data using the Get method with NodeMCU:
 
 .. code-block:: c
 
@@ -1096,14 +1096,14 @@ Bu örnekde C dili ile ile Get metodu kullanarak veri gönderme örneği verilmi
     }
 
 
-GO GET Metodu ile Veri Gönderme
-===============================
+GO Send Data in GET
+===================
 
-IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.
+With the IOThook Api v1.4 update, it allows sending data with the GET method.
 
-Bu örneğe ve diğerlerine `IOTHOOK Git <https://github.com/electrocoder/IoThook>`_ sayfasından ulaşabilirsiniz.
+You can find this example and others at `IOTHOOK Git <https://github.com/electrocoder/IoThook>`_
 
-Bu örnekde GO dili ile ile Get metodu kullanarak veri gönderme örneği verilmiştir:
+Here is an example of sending data using the Get method with Go Language:
 
 .. code-block:: go
 
@@ -1141,14 +1141,14 @@ Bu örnekde GO dili ile ile Get metodu kullanarak veri gönderme örneği verilm
     }
 
 
-PHP GET Metodu ile Veri Gönderme
-================================
+PHP Send Data in GET
+====================
 
-IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.
+With the IOThook Api v1.4 update, it allows sending data with the GET method.
 
-Bu örneğe ve diğerlerine `IOTHOOK Git <https://github.com/electrocoder/IoThook>`_ sayfasından ulaşabilirsiniz.
+You can find this example and others at `IOTHOOK Git <https://github.com/electrocoder/IoThook>`_
 
-Bu örnekde PHP dili ile ile Get metodu kullanarak veri gönderme örneği verilmiştir:
+Here is an example of sending data using the Get method with PHP Lang.:
 
 .. code-block:: php
 
@@ -1185,14 +1185,14 @@ Bu örnekde PHP dili ile ile Get metodu kullanarak veri gönderme örneği veril
     }
 
 
-NodeJS GET Metodu ile Veri Gönderme
-===================================
+NodeJS Send Data in GET
+=======================
 
-IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.
+With the IOThook Api v1.4 update, it allows sending data with the GET method.
 
-Bu örneğe ve diğerlerine `IOTHOOK Git <https://github.com/electrocoder/IoThook>`_ sayfasından ulaşabilirsiniz.
+You can find this example and others at `IOTHOOK Git <https://github.com/electrocoder/IoThook>`_
 
-Bu örnekde NodeJS Native metodu kullanarak veri gönderme örneği verilmiştir:
+Here is an example of sending data using the Get method with NodeJS:
 
 .. code-block:: js
 
@@ -1231,14 +1231,14 @@ Bu örnekde NodeJS Native metodu kullanarak veri gönderme örneği verilmiştir
     req.end();
 
 
-Javascript Jquery Ajax GET Metodu ile Veri Gönderme
-===================================================
+Javascript Jquery Ajax Send Data in GET
+=======================================
 
-IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.
+With the IOThook Api v1.4 update, it allows sending data with the GET method.
 
-Bu örneğe ve diğerlerine `IOTHOOK Git <https://github.com/electrocoder/IoThook>`_ sayfasından ulaşabilirsiniz.
+You can find this example and others at `IOTHOOK Git <https://github.com/electrocoder/IoThook>`_
 
-Bu örnekde NodeJS Native metodu kullanarak veri gönderme örneği verilmiştir:
+Here is an example of sending data using the Get method with Javascript Jquery Ajax:
 
 .. code-block:: js
 
@@ -1263,14 +1263,14 @@ Bu örnekde NodeJS Native metodu kullanarak veri gönderme örneği verilmiştir
     });
 
 
-Java Unirest GET Metodu ile Veri Gönderme
-=========================================
+Java Unirest Send Data in GET
+=============================
 
-IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.
+With the IOThook Api v1.4 update, it allows sending data with the GET method.
 
-Bu örneğe ve diğerlerine `IOTHOOK Git <https://github.com/electrocoder/IoThook>`_ sayfasından ulaşabilirsiniz.
+You can find this example and others at `IOTHOOK Git <https://github.com/electrocoder/IoThook>`_
 
-Bu örnekde NodeJS Native metodu kullanarak veri gönderme örneği verilmiştir:
+Here is an example of sending data using the Get method with Java:
 
 .. code-block:: java
 
@@ -1285,14 +1285,14 @@ Bu örnekde NodeJS Native metodu kullanarak veri gönderme örneği verilmiştir
       .asString();
 
 
-Java Unirest GET Metodu ile Veri Gönderme
-=========================================
+Java Unirest Send Data in GET
+=============================
 
-IOThook Api v1.4 güncellemesi ile GET metodu ile veri göndermeye izin vermektedir.
+With the IOThook Api v1.4 update, it allows sending data with the GET method.
 
-Bu örneğe ve diğerlerine `IOTHOOK Git <https://github.com/electrocoder/IoThook>`_ sayfasından ulaşabilirsiniz.
+You can find this example and others at `IOTHOOK Git <https://github.com/electrocoder/IoThook>`_
 
-Bu örnekde NodeJS Native metodu kullanarak veri gönderme örneği verilmiştir:
+Here is an example of sending data using the Get method with Java:
 
 .. code-block:: java
 
