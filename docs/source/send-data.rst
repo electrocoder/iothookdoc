@@ -209,40 +209,9 @@ You can find this example and others at `IOTHOOK Git <https://github.com/electro
 
 Here is an example of sending data using the Get method with PHP Lang.:
 
-.. code-block:: php
-
-    // 04 Eylul 2017
-    // Guncelleme: 19 Agustos 2019
-    // Sahin MERSIN
-    // iothook.com
-    // postman kullanilarak olusturulmustur
-
-    <?php
-
-    $request = new HttpRequest();
-    $request->setUrl('http://iothook.com/api/update');
-    $request->setMethod(HTTP_METH_GET);
-
-    $request->setQueryData(array(
-      'api_key' => '58088bb005633bb39cdf3b7d',
-      'field_1' => '10',
-      'field_2' => '2',
-      'field_3' => '3'
-    ));
-
-    $request->setHeaders(array(
-      'postman-token' => '791ba738-7cb8-a920-0e5c-883cfb3e4498',
-      'cache-control' => 'no-cache'
-    ));
-
-    try {
-      $response = $request->send();
-
-      echo $response->getBody();
-    } catch (HttpException $ex) {
-      echo $ex;
-    }
-
+.. highlight:: php
+.. literalinclude:: /../../examples/http/php/send_data_in_get.php
+    :caption: send_data_in_get.php
 
 NodeJS Send Data in GET
 =======================
@@ -253,42 +222,10 @@ You can find this example and others at `IOTHOOK Git <https://github.com/electro
 
 Here is an example of sending data using the Get method with NodeJS:
 
-.. code-block:: js
-
-    // 04 Eylul 2017
-    // Guncelleme: 19 Agustos 2019
-    // Sahin MERSIN
-    // iothook.com
-    // postman kullanilarak olusturulmustur
-
-    var http = require("http");
-
-    var options = {
-      "method": "GET",
-      "hostname": "iothook.com",
-      "port": null,
-      "path": "/api/update?api_key=58088bb005633bb39cdf3b7d&field_1=10&field_2=2&field_3=3",
-      "headers": {
-        "cache-control": "no-cache",
-        "postman-token": "033da3c8-6196-cd49-f72d-1850a7d18500"
-      }
-    };
-
-    var req = http.request(options, function (res) {
-      var chunks = [];
-
-      res.on("data", function (chunk) {
-        chunks.push(chunk);
-      });
-
-      res.on("end", function () {
-        var body = Buffer.concat(chunks);
-        console.log(body.toString());
-      });
-    });
-
-    req.end();
-
+.. literalinclude:: /../../examples/http/nodejs/send_data_in_get.js
+    :language: js
+    :caption: send_data_in_get.js
+    :name: send_data_in_get.js
 
 Javascript Jquery Ajax Send Data in GET
 =======================================
@@ -299,28 +236,10 @@ You can find this example and others at `IOTHOOK Git <https://github.com/electro
 
 Here is an example of sending data using the Get method with Javascript Jquery Ajax:
 
-.. code-block:: js
-
-    // 04 Eylul 2017
-    // Guncelleme: 19 Agustos 2019
-    // Sahin MERSIN
-    // iothook.com
-    // postman kullanilarak olusturulmustur
-
-    var settings = {
-      "async": true,
-      "crossDomain": true,
-      "url": "http://iothook.com/api/update?api_key=58088bb005633bb39cdf3b7d&field_1=10&field_2=2&field_3=3",
-      "method": "GET",
-      "headers": {
-        "cache-control": "no-cache",
-      }
-    }
-
-    $.ajax(settings).done(function (response) {
-      console.log(response);
-    });
-
+.. literalinclude:: /../../examples/http/javascript/send_data_in_get_javascript.js
+    :language: js
+    :caption: send_data_in_get_javascript.js
+    :name: send_data_in_get_javascript.js
 
 Java Unirest Send Data in GET
 =============================

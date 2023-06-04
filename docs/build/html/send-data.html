@@ -1216,38 +1216,44 @@ In the example, random numbers between 0-100 were generated and the device was s
 <p>With the IOThook Api v1.4 update, it allows sending data with the GET method.</p>
 <p>You can find this example and others at <a class="reference external" href="https://github.com/electrocoder/IoThook">IOTHOOK Git</a></p>
 <p>Here is an example of sending data using the Get method with PHP Lang.:</p>
+<div class="literal-block-wrapper docutils container" id="id21">
+<div class="code-block-caption"><span class="caption-text">send_data_in_get.php</span><a class="headerlink" href="#id21" title="Permalink to this code">¶</a></div>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">// 04 Eylul 2017</span>
 <span class="x">// Guncelleme: 19 Agustos 2019</span>
 <span class="x">// Sahin MERSIN</span>
 <span class="x">// iothook.com</span>
 <span class="x">// postman kullanilarak olusturulmustur</span>
 
-<span class="cp">&lt;?php</span>
+<span class="x">    </span><span class="cp">&lt;?php</span>
 
-<span class="nv">$request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HttpRequest</span><span class="p">();</span>
-<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setUrl</span><span class="p">(</span><span class="s1">&#39;http://iothook.com/api/update&#39;</span><span class="p">);</span>
-<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setMethod</span><span class="p">(</span><span class="nx">HTTP_METH_GET</span><span class="p">);</span>
+    <span class="nv">$request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HttpRequest</span><span class="p">();</span>
+    <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setUrl</span><span class="p">(</span><span class="s1">&#39;http://iothook.com/api/update&#39;</span><span class="p">);</span>
+    <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setMethod</span><span class="p">(</span><span class="nx">HTTP_METH_GET</span><span class="p">);</span>
 
-<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setQueryData</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
-  <span class="s1">&#39;api_key&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;58088bb005633bb39cdf3b7d&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;field_1&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;field_2&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;field_3&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;3&#39;</span>
-<span class="p">));</span>
+	<span class="c1">// https://iothook.com/en/device/data/650/</span>
+	<span class="c1">// # 650 - iot_examples</span>
 
-<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setHeaders</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
-  <span class="s1">&#39;postman-token&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;791ba738-7cb8-a920-0e5c-883cfb3e4498&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;cache-control&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;no-cache&#39;</span>
-<span class="p">));</span>
+    <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setQueryData</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
+      <span class="s1">&#39;api_key&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;21579c1e874fda7276d94f3c&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;field_1&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;field_2&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;field_3&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;3&#39;</span>
+    <span class="p">));</span>
 
-<span class="k">try</span> <span class="p">{</span>
-  <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">send</span><span class="p">();</span>
+    <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">setHeaders</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
+      <span class="s1">&#39;postman-token&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;791ba738-7cb8-a920-0e5c-883cfb3e4498&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;cache-control&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;no-cache&#39;</span>
+    <span class="p">));</span>
 
-  <span class="k">echo</span> <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">();</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">HttpException</span> <span class="nv">$ex</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">echo</span> <span class="nv">$ex</span><span class="p">;</span>
-<span class="p">}</span>
+    <span class="k">try</span> <span class="p">{</span>
+      <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">send</span><span class="p">();</span>
+
+      <span class="k">echo</span> <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">();</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">HttpException</span> <span class="nv">$ex</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">echo</span> <span class="nv">$ex</span><span class="p">;</span>
+    <span class="p">}</span>
 </pre></div>
+</div>
 </div>
 </section>
 <section id="nodejs-send-data-in-get">
@@ -1255,6 +1261,8 @@ In the example, random numbers between 0-100 were generated and the device was s
 <p>With the IOThook Api v1.4 update, it allows sending data with the GET method.</p>
 <p>You can find this example and others at <a class="reference external" href="https://github.com/electrocoder/IoThook">IOTHOOK Git</a></p>
 <p>Here is an example of sending data using the Get method with NodeJS:</p>
+<div class="literal-block-wrapper docutils container" id="send-data-in-get-js">
+<div class="code-block-caption"><span class="caption-text">send_data_in_get.js</span><a class="headerlink" href="#send-data-in-get-js" title="Permalink to this code">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// 04 Eylul 2017</span>
 <span class="c1">// Guncelleme: 19 Agustos 2019</span>
 <span class="c1">// Sahin MERSIN</span>
@@ -1290,32 +1298,37 @@ In the example, random numbers between 0-100 were generated and the device was s
 <span class="nx">req</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
 </pre></div>
 </div>
+</div>
 </section>
 <section id="javascript-jquery-ajax-send-data-in-get">
 <h3>Javascript Jquery Ajax Send Data in GET<a class="headerlink" href="#javascript-jquery-ajax-send-data-in-get" title="Permalink to this heading">¶</a></h3>
 <p>With the IOThook Api v1.4 update, it allows sending data with the GET method.</p>
 <p>You can find this example and others at <a class="reference external" href="https://github.com/electrocoder/IoThook">IOTHOOK Git</a></p>
 <p>Here is an example of sending data using the Get method with Javascript Jquery Ajax:</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// 04 Eylul 2017</span>
-<span class="c1">// Guncelleme: 19 Agustos 2019</span>
-<span class="c1">// Sahin MERSIN</span>
-<span class="c1">// iothook.com</span>
-<span class="c1">// postman kullanilarak olusturulmustur</span>
+<div class="literal-block-wrapper docutils container" id="send-data-in-get-javascript-js">
+<div class="code-block-caption"><span class="caption-text">send_data_in_get_javascript.js</span><a class="headerlink" href="#send-data-in-get-javascript-js" title="Permalink to this code">¶</a></div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="c1">// 04 Eylul 2017</span>
+<span class="w">    </span><span class="c1">// Guncelleme: 19 Agustos 2019</span>
+<span class="w">    </span><span class="c1">// Sahin MERSIN</span>
+<span class="w">    </span><span class="c1">// iothook.com</span>
+<span class="w">    </span><span class="c1">// postman kullanilarak olusturulmustur</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">settings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="s2">&quot;async&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">  </span><span class="s2">&quot;crossDomain&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">  </span><span class="s2">&quot;url&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://iothook.com/api/update?api_key=58088bb005633bb39cdf3b7d&amp;field_1=10&amp;field_2=2&amp;field_3=3&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="s2">&quot;method&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;GET&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="s2">&quot;headers&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="s2">&quot;cache-control&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;no-cache&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">settings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="s2">&quot;async&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;crossDomain&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;url&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://iothook.com/api/update?api_key=58088bb005633bb39cdf3b7d&amp;field_1=10&amp;field_2=2&amp;field_3=3&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;method&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;headers&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">&quot;cache-control&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;no-cache&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
 
-<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settings</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
-<span class="p">});</span>
+<span class="w">    </span><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settings</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span>
 </pre></div>
+</div>
 </div>
 </section>
 <section id="java-unirest-send-data-in-get">
