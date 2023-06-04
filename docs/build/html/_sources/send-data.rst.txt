@@ -250,21 +250,13 @@ You can find this example and others at `IOTHOOK Git <https://github.com/electro
 
 Here is an example of sending data using the Get method with Java:
 
-.. code-block:: java
+.. literalinclude:: /../../examples/http/java/send_data_in_get.java
+    :language: java
+    :caption: send_data_in_get.java
+    :name: send_data_in_get.java
 
-    // 04 Eylul 2017
-    // Guncelleme: 19 Agustos 2019
-    // Sahin MERSIN
-    // iothook.com
-    // postman kullanilarak olusturulmustur
-
-    HttpResponse<String> response = Unirest.get("http://iothook.com/api/update?api_key=58088bb005633bb39cdf3b7d&field_1=10&field_2=2&field_3=3")
-      .header("cache-control", "no-cache")
-      .asString();
-
-
-Java Unirest Send Data in GET
-=============================
+Java Request Send Data in GET 2
+===============================
 
 With the IOThook Api v1.4 update, it allows sending data with the GET method.
 
@@ -272,23 +264,10 @@ You can find this example and others at `IOTHOOK Git <https://github.com/electro
 
 Here is an example of sending data using the Get method with Java:
 
-.. code-block:: java
-
-    // 04 Eylul 2017
-    // Guncelleme: 19 Agustos 2019
-    // Sahin MERSIN
-    // iothook.com
-    // postman kullanilarak olusturulmustur
-
-    OkHttpClient client = new OkHttpClient();
-
-    Request request = new Request.Builder()
-      .url("http://iothook.com/api/update?api_key=58088bb005633bb39cdf3b7d&field_1=10&field_2=2&field_3=3")
-      .get()
-      .addHeader("cache-control", "no-cache")
-      .build();
-
-    Response response = client.newCall(request).execute();
+.. literalinclude:: /../../examples/http/java/send_data_in_get_2.java
+    :language: java
+    :caption: send_data_in_get_2.java
+    :name: send_data_in_get_2.java
 
 MQTT Send Data
 **************
