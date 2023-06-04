@@ -3,8 +3,6 @@
 
   IoThook'da her cihazin bir kimlik numarasi APIKEY'i vardir.
   Bu APIKEY kullanilarak veriler IoThook'a GET metodu ile gonderilir.
-  10 kere 15 saniyede bir random verileri iothook'a gonderir.
-
 
   Bu ornek IoThook servisine veri almak/gondermek icin baslangic seviyesinde
   testlerin yapilmasini amaclamaktadir.
@@ -36,7 +34,6 @@
 
 import pprint
 import requests
-import time
 
 # demo account API_KEY
 # https://iothook.com/en/device/data/650/
@@ -44,9 +41,7 @@ import time
 API_KEY = '21579c1e874fda7276d94f3c'  # write api key
 url = 'http://iothook.com/api/update/?api_key=' + API_KEY
 
-for i in range(10):
-    data = url + '&field_1=10&field_2=20&field_3=30'
+data = url + '&field_1=10&field_2=20&field_3=30'
 
-    response = requests.get(data)
-    pprint.pprint(response.json())
-    time.sleep(15)
+response = requests.get(data)
+pprint.pprint(response.json())
