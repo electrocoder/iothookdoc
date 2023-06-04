@@ -316,38 +316,40 @@ they are not sent, they are recorded as None.</p>
 <figure class="align-center">
 <img alt="python-send-data.png" src="_images/python-iothook.png" />
 </figure>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Python ile IoThook REST Api Ornegi</span>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text">iot_get_write_1.py</span><a class="headerlink" href="#id13" title="Permalink to this code">¶</a></div>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  Python ile IoThook REST Api Ornegi</span>
 
-<span class="sd">IoThook&#39;da her cihazin bir kimlik numarasi APIKEY&#39;i vardir.</span>
-<span class="sd">Bu APIKEY kullanilarak veriler IoThook&#39;a GET metodu ile gonderilir.</span>
+<span class="sd">  IoThook&#39;da her cihazin bir kimlik numarasi APIKEY&#39;i vardir.</span>
+<span class="sd">  Bu APIKEY kullanilarak veriler IoThook&#39;a GET metodu ile gonderilir.</span>
 
-<span class="sd">Bu ornek IoThook servisine veri almak/gondermek icin baslangic seviyesinde</span>
-<span class="sd">testlerin yapilmasini amaclamaktadir.</span>
+<span class="sd">  Bu ornek IoThook servisine veri almak/gondermek icin baslangic seviyesinde</span>
+<span class="sd">  testlerin yapilmasini amaclamaktadir.</span>
 
-<span class="sd">v1 : 20 Eylul 2017</span>
-<span class="sd">v2 : 19 Agustos 2019</span>
-<span class="sd">v3 : 31 Ekim 2022</span>
+<span class="sd">  v1 : 20 Eylul 2017</span>
+<span class="sd">  v2 : 19 Agustos 2019</span>
+<span class="sd">  v3 : 31 Ekim 2022</span>
 
-<span class="sd">Sahin MERSIN - electrocoder</span>
+<span class="sd">  Sahin MERSIN - electrocoder</span>
 
-<span class="sd">Daha fazlasi icin</span>
+<span class="sd">  Daha fazlasi icin</span>
 
-<span class="sd">http://www.iothook.com</span>
-<span class="sd">https://www.mesebilisim.com</span>
-<span class="sd">https://mesemekatronik.com</span>
-<span class="sd">https://electrocoder.blogspot.com</span>
-<span class="sd">https://github.com/meseiot/iotexamples</span>
+<span class="sd">  http://www.iothook.com</span>
+<span class="sd">  https://www.mesebilisim.com</span>
+<span class="sd">  https://mesemekatronik.com</span>
+<span class="sd">  https://electrocoder.blogspot.com</span>
+<span class="sd">  https://github.com/meseiot/iotexamples</span>
 
-<span class="sd">sitelerine gidiniz.</span>
+<span class="sd">  sitelerine gidiniz.</span>
 
-<span class="sd">Yayin : http://mesebilisim.com</span>
+<span class="sd">  Yayin : http://mesebilisim.com</span>
 
-<span class="sd">Licensed under the Apache License, Version 2.0 (the &quot;License&quot;).</span>
-<span class="sd">You may not use this file except in compliance with the License.</span>
-<span class="sd">A copy of the License is located at</span>
+<span class="sd">  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;).</span>
+<span class="sd">  You may not use this file except in compliance with the License.</span>
+<span class="sd">  A copy of the License is located at</span>
 
-<span class="sd">http://www.apache.org/licenses/</span>
+<span class="sd">  http://www.apache.org/licenses/</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="kn">import</span> <span class="nn">pprint</span>
@@ -365,6 +367,7 @@ they are not sent, they are recorded as None.</p>
 <span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
 </pre></div>
 </div>
+</div>
 </section>
 <section id="send-data-in-get-with-python-examples-2">
 <h4>Send Data in GET with Python Examples 2:<a class="headerlink" href="#send-data-in-get-with-python-examples-2" title="Permalink to this heading">¶</a></h4>
@@ -372,7 +375,9 @@ they are not sent, they are recorded as None.</p>
 <figure class="align-center">
 <img alt="python-send-data.png" src="_images/python-iothook.png" />
 </figure>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<div class="literal-block-wrapper docutils container" id="id14">
+<div class="code-block-caption"><span class="caption-text">iot_get_write_2.py</span><a class="headerlink" href="#id14" title="Permalink to this code">¶</a></div>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">  Python ile IoThook REST Api Ornegi</span>
 
 <span class="sd">  IoThook&#39;da her cihazin bir kimlik numarasi APIKEY&#39;i vardir.</span>
@@ -426,6 +431,7 @@ they are not sent, they are recorded as None.</p>
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
 </section>
 </section>
 <section id="arduino-and-esp8266">
@@ -436,181 +442,184 @@ they are not sent, they are recorded as None.</p>
 In the example, random numbers between 0-100 were generated and the device was sent to the device with
 “# 650 - iot_examples” on iothook.</p>
 <p>You can find this example and others at <a class="reference external" href="https://github.com/meseiot/iot-examples/blob/master/http/arduino/esp8266/arduino_esp8266_post_send_data.ino">IoT Examples ESP8266 Post Github</a>.</p>
+<div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-text">arduino_esp8266_post_send_data.ino</span><a class="headerlink" href="#id15" title="Permalink to this code">¶</a></div>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
-<span class="cm">  Arduino ile ESP8266 Wifi Modul Testi</span>
+<span class="cm">      Arduino ile ESP8266 Wifi Modul Testi</span>
 
-<span class="cm">  Kod Arduino ya yuklendiginde Arduino IDE nin Serial Monitor u</span>
-<span class="cm">  ile ESP8266 arasinda haberlesme gozlenebilir.</span>
+<span class="cm">      Kod Arduino ya yuklendiginde Arduino IDE nin Serial Monitor u</span>
+<span class="cm">      ile ESP8266 arasinda haberlesme gozlenebilir.</span>
 
-<span class="cm">  Arduino ile ESP8266 arasindaki iletisim Baud ayari</span>
-<span class="cm">  115200 olmalidir.</span>
+<span class="cm">      Arduino ile ESP8266 arasindaki iletisim Baud ayari</span>
+<span class="cm">      115200 olmalidir.</span>
 
-<span class="cm">  Arduino 0 ile 100 arasinda uretmis oldugu Random sayıyı iothook a gonderir.</span>
+<span class="cm">      Arduino 0 ile 100 arasinda uretmis oldugu Random sayıyı iothook a gonderir.</span>
 
-<span class="cm">  Bu cihaza ait datalar</span>
-<span class="cm">  https://iothook.com/en/device/data/19/</span>
-<span class="cm">  adresinden gercek zamanli olarak izlenebilir.</span>
+<span class="cm">      Bu cihaza ait datalar</span>
+<span class="cm">      https://iothook.com/en/device/data/19/</span>
+<span class="cm">      adresinden gercek zamanli olarak izlenebilir.</span>
 
-<span class="cm">  Bu ornek IOThook servisine veri gondermek icin baslangic ayarlarinin</span>
-<span class="cm">  yapilmasini amaclamaktadir.</span>
+<span class="cm">      Bu ornek IOThook servisine veri gondermek icin baslangic ayarlarinin</span>
+<span class="cm">      yapilmasini amaclamaktadir.</span>
 
-<span class="cm">  24 Eylul 2017</span>
-<span class="cm">  Güncelleme : 19 Agustos 2019</span>
-<span class="cm">  Sahin MERSIN</span>
+<span class="cm">      24 Eylul 2017</span>
+<span class="cm">      Güncelleme : 19 Agustos 2019</span>
+<span class="cm">      Sahin MERSIN</span>
 
-<span class="cm">  Daha fazlasi icin</span>
+<span class="cm">      Daha fazlasi icin</span>
 
-<span class="cm">  http://www.iothook.com</span>
-<span class="cm">  ve</span>
-<span class="cm">  https://github.com/electrocoder/IOThook</span>
+<span class="cm">      http://www.iothook.com</span>
+<span class="cm">      ve</span>
+<span class="cm">      https://github.com/electrocoder/IOThook</span>
 
-<span class="cm">  sitelerine gidiniz.</span>
-<span class="cm">  Sorular ve destek talepleri icin</span>
-<span class="cm">  https://github.com/electrocoder/IOThook/issues</span>
-<span class="cm">  sayfasina gidiniz.</span>
+<span class="cm">      sitelerine gidiniz.</span>
+<span class="cm">      Sorular ve destek talepleri icin</span>
+<span class="cm">      https://github.com/electrocoder/IOThook/issues</span>
+<span class="cm">      sayfasina gidiniz.</span>
 
-<span class="cm">  Yayin ve sahiplik http://mesebilisim.com</span>
-<span class="cm">*/</span>
+<span class="cm">      Yayin ve sahiplik http://mesebilisim.com</span>
+<span class="cm">    */</span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;SoftwareSerial.h&quot;</span>
+<span class="w">    </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;SoftwareSerial.h&quot;</span>
 
-<span class="n">String</span><span class="w"> </span><span class="n">ssid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;WIFI_ID&quot;</span><span class="p">;</span>
-<span class="n">String</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;WIFI_PASSWORD&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">ssid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;WIFI_ID&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;WIFI_PASSWORD&quot;</span><span class="p">;</span>
 
-<span class="n">SoftwareSerial</span><span class="w"> </span><span class="nf">esp</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">);</span><span class="c1">// RX, TX</span>
+<span class="w">    </span><span class="n">SoftwareSerial</span><span class="w"> </span><span class="nf">esp</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">);</span><span class="c1">// RX, TX</span>
 
-<span class="n">String</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
 
-<span class="n">String</span><span class="w"> </span><span class="n">server</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;iothook.com&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">server</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;iothook.com&quot;</span><span class="p">;</span>
 
-<span class="n">String</span><span class="w"> </span><span class="n">uri</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/api/update/&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">uri</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/api/update/&quot;</span><span class="p">;</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">  </span><span class="n">esp</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="w">      </span><span class="n">esp</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
 
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
 
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Arduino ile ESP8266 Wifi Modul Testi&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;          www.IOThook.com           &quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Arduino ile ESP8266 Wifi Modul Testi&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;          www.IOThook.com           &quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
 
-<span class="w">  </span><span class="n">reset</span><span class="p">();</span>
+<span class="w">      </span><span class="n">reset</span><span class="p">();</span>
 
-<span class="w">  </span><span class="n">connectWifi</span><span class="p">();</span>
+<span class="w">      </span><span class="n">connectWifi</span><span class="p">();</span>
 
-<span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
 
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">reset</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">reset</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">  </span><span class="n">esp</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;AT+RST&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">esp</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;AT+RST&quot;</span><span class="p">);</span>
 
-<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+<span class="w">      </span><span class="n">delay</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
 
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">esp</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Modul Reset yapildi&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Module Reset yapılamadi&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">esp</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Modul Reset yapildi&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="k">else</span><span class="w"> </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Module Reset yapılamadi&quot;</span><span class="p">);</span>
 
-<span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
 
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">connectWifi</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">connectWifi</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AT+CWJAP=</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ssid</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AT+CWJAP=</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ssid</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">;</span>
 
-<span class="w">  </span><span class="n">esp</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">cmd</span><span class="p">);</span>
+<span class="w">      </span><span class="n">esp</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">cmd</span><span class="p">);</span>
 
-<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">4000</span><span class="p">);</span>
+<span class="w">      </span><span class="n">delay</span><span class="p">(</span><span class="mi">4000</span><span class="p">);</span>
 
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">esp</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">esp</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;ESP8266 Wifi ye baglandi&quot;</span><span class="p">);</span>
-
-<span class="w">  </span><span class="p">}</span>
-
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">    </span><span class="n">connectWifi</span><span class="p">();</span>
-
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;ESP8266 Wifi ye baglanamadı!&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
-
-<span class="p">}</span>
-
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">  </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;{</span><span class="se">\&quot;</span><span class="s">api_key</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">58088bb005633bb39cdf3b7d</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\&quot;</span><span class="s">field_1</span><span class="se">\&quot;</span><span class="s">:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">random</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;}&quot;</span><span class="p">;</span>
-
-<span class="w">  </span><span class="n">httppost</span><span class="p">();</span>
-
-<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span>
-
-<span class="p">}</span>
-
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">httppost</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">  </span><span class="n">esp</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;AT+CIPSTART=</span><span class="se">\&quot;</span><span class="s">TCP</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">server</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">,80&quot;</span><span class="p">);</span>
-
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">esp</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;TCP baglanti hazir&quot;</span><span class="p">);</span>
-
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="k">else</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;TCP baglanti hatali&quot;</span><span class="p">);</span>
-
-<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
-
-<span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">postRequest</span><span class="w"> </span><span class="o">=</span>
-
-<span class="w">    </span><span class="s">&quot;POST &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">uri</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; HTTP/1.0</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span>
-
-<span class="w">    </span><span class="s">&quot;Host: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">server</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span>
-
-<span class="w">    </span><span class="s">&quot;Accept: *&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;*</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span>
-
-<span class="w">    </span><span class="s">&quot;Content-Length: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span>
-
-<span class="w">    </span><span class="s">&quot;Content-Type: application/x-www-form-urlencoded</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span>
-
-<span class="w">    </span><span class="s">&quot;</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
-
-<span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">sendCmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AT+CIPSEND=&quot;</span><span class="p">;</span>
-
-<span class="w">  </span><span class="n">esp</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">sendCmd</span><span class="p">);</span>
-
-<span class="w">  </span><span class="n">esp</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">postRequest</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="p">);</span>
-
-<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1500</span><span class="p">);</span>
-
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">esp</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;&gt;&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Gonderiliyor...&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="n">esp</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">postRequest</span><span class="p">);</span>
-
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">esp</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;SEND OK&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Gonderildi :)&quot;</span><span class="p">);</span>
-
-<span class="w">      </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">esp</span><span class="p">.</span><span class="n">available</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">tmpResp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">esp</span><span class="p">.</span><span class="n">readString</span><span class="p">();</span>
-
-<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">tmpResp</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;ESP8266 Wifi ye baglandi&quot;</span><span class="p">);</span>
 
 <span class="w">      </span><span class="p">}</span>
 
-<span class="w">      </span><span class="n">esp</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;AT+CIPCLOSE&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">connectWifi</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;ESP8266 Wifi ye baglanamadı!&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
 
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">else</span>
-<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Gonderilemedi :(&quot;</span><span class="p">);</span>
 
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="k">else</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Gonderim hatasi! ESP hazir degil!&quot;</span><span class="p">);</span>
-<span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">      </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;{</span><span class="se">\&quot;</span><span class="s">api_key</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">58088bb005633bb39cdf3b7d</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\&quot;</span><span class="s">field_1</span><span class="se">\&quot;</span><span class="s">:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">random</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;}&quot;</span><span class="p">;</span>
+
+<span class="w">      </span><span class="n">httppost</span><span class="p">();</span>
+
+<span class="w">      </span><span class="n">delay</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span>
+
+<span class="w">    </span><span class="p">}</span>
+
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">httppost</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">      </span><span class="n">esp</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;AT+CIPSTART=</span><span class="se">\&quot;</span><span class="s">TCP</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">server</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">,80&quot;</span><span class="p">);</span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">esp</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;TCP baglanti hazir&quot;</span><span class="p">);</span>
+
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="k">else</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;TCP baglanti hatali&quot;</span><span class="p">);</span>
+
+<span class="w">      </span><span class="n">delay</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
+
+<span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">postRequest</span><span class="w"> </span><span class="o">=</span>
+
+<span class="w">        </span><span class="s">&quot;POST &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">uri</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; HTTP/1.0</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span>
+
+<span class="w">        </span><span class="s">&quot;Host: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">server</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span>
+
+<span class="w">        </span><span class="s">&quot;Accept: *&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;*</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span>
+
+<span class="w">        </span><span class="s">&quot;Content-Length: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span>
+
+<span class="w">        </span><span class="s">&quot;Content-Type: application/x-www-form-urlencoded</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span>
+
+<span class="w">        </span><span class="s">&quot;</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+
+<span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">sendCmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AT+CIPSEND=&quot;</span><span class="p">;</span>
+
+<span class="w">      </span><span class="n">esp</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">sendCmd</span><span class="p">);</span>
+
+<span class="w">      </span><span class="n">esp</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">postRequest</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="p">);</span>
+
+<span class="w">      </span><span class="n">delay</span><span class="p">(</span><span class="mi">1500</span><span class="p">);</span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">esp</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;&gt;&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Gonderiliyor...&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">esp</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">postRequest</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">esp</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;SEND OK&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Gonderildi :)&quot;</span><span class="p">);</span>
+
+<span class="w">          </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">esp</span><span class="p">.</span><span class="n">available</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">tmpResp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">esp</span><span class="p">.</span><span class="n">readString</span><span class="p">();</span>
+
+<span class="w">            </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">tmpResp</span><span class="p">);</span>
+
+<span class="w">          </span><span class="p">}</span>
+
+<span class="w">          </span><span class="n">esp</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;AT+CIPCLOSE&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">          </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Gonderilemedi :(&quot;</span><span class="p">);</span>
+
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="k">else</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Gonderim hatasi! ESP hazir degil!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
 </pre></div>
+</div>
 </div>
 </section>
 <section id="arduino-and-esp8266-http-post-send-data-2">
@@ -618,184 +627,188 @@ In the example, random numbers between 0-100 were generated and the device was s
 <p>In this example, Arduino code is given for sending data to iothook with ESP8266 connected to Arduino Uno with RX and TX.
 In the example, random numbers between 0-100 were generated and the device was sent to the device with
 “# 650 - iot_examples” on iothook.</p>
-<p>You can find this example and others at <a class="reference external" href="https://github.com/meseiot/iot-examples/blob/master/http/arduino/esp8266/arduino_esp8266_post_send_data.ino">IoT Examples ESP8266 Post Send Github</a>.</p>
+<p>You can find this example and others at <a class="reference external" href="https://github.com/meseiot/iot-examples/blob/master/http/arduino/esp8266/arduino_esp8266_post_send_data_2.ino">IoT Examples ESP8266 Post Send Github</a>.</p>
+<div class="literal-block-wrapper docutils container" id="id16">
+<div class="code-block-caption"><span class="caption-text">arduino_esp8266_post_send_data_2.ino</span><a class="headerlink" href="#id16" title="Permalink to this code">¶</a></div>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
-<span class="cm">  Arduino ile ESP8266 Wifi Modul Testi</span>
+<span class="cm">      Arduino ile ESP8266 Wifi Modul Testi</span>
 
-<span class="cm">  Kod Arduino ya yuklendiginde Arduino IDE nin Serial Monitor u</span>
-<span class="cm">  ile ESP8266 arasinda haberlesme gozlenebilir.</span>
+<span class="cm">      Kod Arduino ya yuklendiginde Arduino IDE nin Serial Monitor u</span>
+<span class="cm">      ile ESP8266 arasinda haberlesme gozlenebilir.</span>
 
-<span class="cm">  Arduino ile ESP8266 arasindaki iletisim Baud ayari</span>
-<span class="cm">  115200 olmalidir.</span>
+<span class="cm">      Arduino ile ESP8266 arasindaki iletisim Baud ayari</span>
+<span class="cm">      115200 olmalidir.</span>
 
-<span class="cm">  Arduino 0 ile 100 arasinda uretmis oldugu 2 adet Random sayıyı iothook a gonderir.</span>
-<span class="cm">  Bu sayılar &#39;data&#39; değişkeni içerisinde field_1 ve field_2 değerleridir. Bu değerler</span>
-<span class="cm">  sensör olarak kullanılmaktadır. Sıcaklık  ve Nem gibi sensörlerinizi bu alanlara</span>
-<span class="cm">  gönderebilirsiniz.</span>
+<span class="cm">      Arduino 0 ile 100 arasinda uretmis oldugu Random sayıyı iothook a gonderir.</span>
 
-<span class="cm">  Bu cihaza ait datalar</span>
-<span class="cm">  https://iothook.com/en/device/data/12/</span>
-<span class="cm">  adresinden gercek zamanli olarak izlenebilir.</span>
+<span class="cm">      Bu cihaza ait datalar</span>
+<span class="cm">      https://iothook.com/en/device/data/19/</span>
+<span class="cm">      adresinden gercek zamanli olarak izlenebilir.</span>
 
-<span class="cm">  Bu ornek IOThook servisine veri gondermek icin baslangic ayarlarinin</span>
-<span class="cm">  yapilmasini amaclamaktadir.</span>
+<span class="cm">      Bu ornek IOThook servisine veri gondermek icin baslangic ayarlarinin</span>
+<span class="cm">      yapilmasini amaclamaktadir.</span>
 
-<span class="cm">  24 Eylul 2017</span>
-<span class="cm">  Sahin MERSIN</span>
+<span class="cm">      24 Eylul 2017</span>
+<span class="cm">      Güncelleme : 19 Agustos 2019</span>
+<span class="cm">      Sahin MERSIN</span>
 
-<span class="cm">  Daha fazlasi icin</span>
+<span class="cm">      Daha fazlasi icin</span>
 
-<span class="cm">  http://www.iothook.com</span>
-<span class="cm">  ve</span>
-<span class="cm">  https://github.com/electrocoder/IOThook</span>
+<span class="cm">      http://www.iothook.com</span>
+<span class="cm">      ve</span>
+<span class="cm">      https://github.com/electrocoder/IOThook</span>
 
-<span class="cm">  sitelerine gidiniz.</span>
-<span class="cm">  Sorular ve destek talepleri icin</span>
-<span class="cm">  https://github.com/electrocoder/IOThook/issues</span>
-<span class="cm">  sayfasina gidiniz.</span>
+<span class="cm">      sitelerine gidiniz.</span>
+<span class="cm">      Sorular ve destek talepleri icin</span>
+<span class="cm">      https://github.com/electrocoder/IOThook/issues</span>
+<span class="cm">      sayfasina gidiniz.</span>
 
-<span class="cm">  Yayin ve sahiplik http://mesebilisim.com</span>
-<span class="cm">*/</span>
+<span class="cm">      Yayin ve sahiplik http://mesebilisim.com</span>
+<span class="cm">    */</span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;SoftwareSerial.h&quot;</span>
+<span class="w">    </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;SoftwareSerial.h&quot;</span>
 
-<span class="n">String</span><span class="w"> </span><span class="n">ssid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;WIFI_SSID&quot;</span><span class="p">;</span>
-<span class="n">String</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;WIFI_PASSWORD&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">ssid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;WIFI_ID&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;WIFI_PASSWORD&quot;</span><span class="p">;</span>
 
-<span class="n">SoftwareSerial</span><span class="w"> </span><span class="nf">esp</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">);</span><span class="c1">// RX, TX</span>
+<span class="w">    </span><span class="n">SoftwareSerial</span><span class="w"> </span><span class="nf">esp</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">);</span><span class="c1">// RX, TX</span>
 
-<span class="n">String</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
 
-<span class="n">String</span><span class="w"> </span><span class="n">server</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;iothook.com&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">server</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;iothook.com&quot;</span><span class="p">;</span>
 
-<span class="n">String</span><span class="w"> </span><span class="n">uri</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/api/update/&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">uri</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/api/update/&quot;</span><span class="p">;</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">  </span><span class="n">esp</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="w">      </span><span class="n">esp</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
 
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
 
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Arduino ile ESP8266 Wifi Modul Testi&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;          www.IOThook.com           &quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Arduino ile ESP8266 Wifi Modul Testi&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;          www.IOThook.com           &quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
 
-<span class="w">  </span><span class="n">reset</span><span class="p">();</span>
+<span class="w">      </span><span class="n">reset</span><span class="p">();</span>
 
-<span class="w">  </span><span class="n">connectWifi</span><span class="p">();</span>
+<span class="w">      </span><span class="n">connectWifi</span><span class="p">();</span>
 
-<span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
 
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">reset</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">reset</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">  </span><span class="n">esp</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;AT+RST&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">esp</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;AT+RST&quot;</span><span class="p">);</span>
 
-<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+<span class="w">      </span><span class="n">delay</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
 
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">esp</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Modul Reset yapildi&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Module Reset yapılamadi&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">esp</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Modul Reset yapildi&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="k">else</span><span class="w"> </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Module Reset yapılamadi&quot;</span><span class="p">);</span>
 
-<span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
 
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">connectWifi</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">connectWifi</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AT+CWJAP=</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ssid</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AT+CWJAP=</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ssid</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">;</span>
 
-<span class="w">  </span><span class="n">esp</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">cmd</span><span class="p">);</span>
+<span class="w">      </span><span class="n">esp</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">cmd</span><span class="p">);</span>
 
-<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">4000</span><span class="p">);</span>
+<span class="w">      </span><span class="n">delay</span><span class="p">(</span><span class="mi">4000</span><span class="p">);</span>
 
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">esp</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">esp</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;ESP8266 Wifi ye baglandi&quot;</span><span class="p">);</span>
-
-<span class="w">  </span><span class="p">}</span>
-
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">    </span><span class="n">connectWifi</span><span class="p">();</span>
-
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;ESP8266 Wifi ye baglanamadı!&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
-
-<span class="p">}</span>
-
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">  </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;{</span><span class="se">\&quot;</span><span class="s">api_key</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">58088bb005633bb39cdf3b7d</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\&quot;</span><span class="s">field_1</span><span class="se">\&quot;</span><span class="s">:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">random</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;,</span><span class="se">\&quot;</span><span class="s">field_2</span><span class="se">\&quot;</span><span class="s">:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">random</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;}&quot;</span><span class="p">;</span>
-
-<span class="w">  </span><span class="n">httppost</span><span class="p">();</span>
-
-<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">8000</span><span class="p">);</span>
-
-<span class="p">}</span>
-
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">httppost</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">  </span><span class="n">esp</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;AT+CIPSTART=</span><span class="se">\&quot;</span><span class="s">TCP</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">server</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">,80&quot;</span><span class="p">);</span>
-
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">esp</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;TCP baglanti hazir&quot;</span><span class="p">);</span>
-
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="k">else</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;TCP baglanti hatali&quot;</span><span class="p">);</span>
-
-<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
-
-<span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">postRequest</span><span class="w"> </span><span class="o">=</span>
-
-<span class="w">    </span><span class="s">&quot;POST &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">uri</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; HTTP/1.0</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span>
-
-<span class="w">    </span><span class="s">&quot;Host: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">server</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span>
-
-<span class="w">    </span><span class="s">&quot;Accept: *&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;*</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span>
-
-<span class="w">    </span><span class="s">&quot;Content-Length: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span>
-
-<span class="w">    </span><span class="s">&quot;Content-Type: application/x-www-form-urlencoded</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span>
-
-<span class="w">    </span><span class="s">&quot;</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
-
-<span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">sendCmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AT+CIPSEND=&quot;</span><span class="p">;</span>
-
-<span class="w">  </span><span class="n">esp</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">sendCmd</span><span class="p">);</span>
-
-<span class="w">  </span><span class="n">esp</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">postRequest</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="p">);</span>
-
-<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1500</span><span class="p">);</span>
-
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">esp</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;&gt;&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Gonderiliyor...&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="n">esp</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">postRequest</span><span class="p">);</span>
-
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">esp</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;SEND OK&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Gonderildi :)&quot;</span><span class="p">);</span>
-
-<span class="w">      </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">esp</span><span class="p">.</span><span class="n">available</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">tmpResp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">esp</span><span class="p">.</span><span class="n">readString</span><span class="p">();</span>
-
-<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">tmpResp</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;ESP8266 Wifi ye baglandi&quot;</span><span class="p">);</span>
 
 <span class="w">      </span><span class="p">}</span>
 
-<span class="w">      </span><span class="n">esp</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;AT+CIPCLOSE&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">connectWifi</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;ESP8266 Wifi ye baglanamadı!&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
 
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">else</span>
-<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Gonderilemedi :(&quot;</span><span class="p">);</span>
 
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="k">else</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Gonderim hatasi! ESP hazir degil!&quot;</span><span class="p">);</span>
-<span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">      </span><span class="c1">// # 684 - Mobile Network Data</span>
+<span class="w">      </span><span class="c1">// https://iothook.com/en/device/settings/684/</span>
+<span class="w">      </span><span class="c1">// https://iothook.com/en/device/data/684/</span>
+<span class="w">      </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;{</span><span class="se">\&quot;</span><span class="s">api_key</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">4fafb9def3e8a41c27fac70d</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\&quot;</span><span class="s">field_1</span><span class="se">\&quot;</span><span class="s">:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">random</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;}&quot;</span><span class="p">;</span>
+
+<span class="w">      </span><span class="n">httppost</span><span class="p">();</span>
+
+<span class="w">      </span><span class="n">delay</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span>
+
+<span class="w">    </span><span class="p">}</span>
+
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">httppost</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">      </span><span class="n">esp</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;AT+CIPSTART=</span><span class="se">\&quot;</span><span class="s">TCP</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">server</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">,80&quot;</span><span class="p">);</span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">esp</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;TCP baglanti hazir&quot;</span><span class="p">);</span>
+
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="k">else</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;TCP baglanti hatali&quot;</span><span class="p">);</span>
+
+<span class="w">      </span><span class="n">delay</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
+
+<span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">postRequest</span><span class="w"> </span><span class="o">=</span>
+
+<span class="w">        </span><span class="s">&quot;POST &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">uri</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; HTTP/1.0</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span>
+
+<span class="w">        </span><span class="s">&quot;Host: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">server</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span>
+
+<span class="w">        </span><span class="s">&quot;Accept: *&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;*</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span>
+
+<span class="w">        </span><span class="s">&quot;Content-Length: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span>
+
+<span class="w">        </span><span class="s">&quot;Content-Type: application/x-www-form-urlencoded</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span>
+
+<span class="w">        </span><span class="s">&quot;</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+
+<span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">sendCmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AT+CIPSEND=&quot;</span><span class="p">;</span>
+
+<span class="w">      </span><span class="n">esp</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">sendCmd</span><span class="p">);</span>
+
+<span class="w">      </span><span class="n">esp</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">postRequest</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="p">);</span>
+
+<span class="w">      </span><span class="n">delay</span><span class="p">(</span><span class="mi">1500</span><span class="p">);</span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">esp</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;&gt;&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Gonderiliyor...&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">esp</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">postRequest</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">esp</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;SEND OK&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Gonderildi :)&quot;</span><span class="p">);</span>
+
+<span class="w">          </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">esp</span><span class="p">.</span><span class="n">available</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">tmpResp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">esp</span><span class="p">.</span><span class="n">readString</span><span class="p">();</span>
+
+<span class="w">            </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">tmpResp</span><span class="p">);</span>
+
+<span class="w">          </span><span class="p">}</span>
+
+<span class="w">          </span><span class="n">esp</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;AT+CIPCLOSE&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">          </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Gonderilemedi :(&quot;</span><span class="p">);</span>
+
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="k">else</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Gonderim hatasi! ESP hazir degil!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
 </pre></div>
+</div>
 </div>
 </section>
 </section>
@@ -804,187 +817,190 @@ In the example, random numbers between 0-100 were generated and the device was s
 <p>With the IOThook Api v1.4 update, it allows sending data with the GET method.</p>
 <p>You can find this example and others at <a class="reference external" href="https://github.com/electrocoder/IoThook">IOTHOOK Git</a></p>
 <p>Here is an example of sending data using the Get method with Arduino, ESP8266, NodeMCU:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// 18.09.2017</span>
-<span class="c1">// Guncelleme : 19.08.2019</span>
-<span class="c1">// nodemcu ile sicaklik ve nem takibi</span>
-<span class="c1">// electrocoder@gmail.com</span>
-<span class="c1">// sahin mersin</span>
-<span class="c1">// v1</span>
+<div class="literal-block-wrapper docutils container" id="id17">
+<div class="code-block-caption"><span class="caption-text">arduino_nodemcu_esp8266_temp_hum_send_data.ino</span><a class="headerlink" href="#id17" title="Permalink to this code">¶</a></div>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="c1">// 18.09.2017</span>
+<span class="w">    </span><span class="c1">// Guncelleme : 19.08.2019</span>
+<span class="w">    </span><span class="c1">// nodemcu ile sicaklik ve nem takibi</span>
+<span class="w">    </span><span class="c1">// electrocoder@gmail.com</span>
+<span class="w">    </span><span class="c1">// sahin mersin</span>
+<span class="w">    </span><span class="c1">// v1</span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ESP8266WiFi.h&gt;</span><span class="c1">          //https://github.com/esp8266/Arduino</span>
+<span class="w">    </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ESP8266WiFi.h&gt;</span><span class="c1">          //https://github.com/esp8266/Arduino</span>
 
-<span class="c1">//needed for library</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;DNSServer.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ESP8266WebServer.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;WiFiManager.h&gt;</span><span class="c1">          //https://github.com/tzapu/WiFiManager</span>
+<span class="w">    </span><span class="c1">//needed for library</span>
+<span class="w">    </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;DNSServer.h&gt;</span>
+<span class="w">    </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ESP8266WebServer.h&gt;</span>
+<span class="w">    </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;WiFiManager.h&gt;</span><span class="c1">          //https://github.com/tzapu/WiFiManager</span>
 
-<span class="c1">//for LED status</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Ticker.h&gt;</span>
+<span class="w">    </span><span class="c1">//for LED status</span>
+<span class="w">    </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Ticker.h&gt;</span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ESP8266HTTPClient.h&gt;</span>
+<span class="w">    </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ESP8266HTTPClient.h&gt;</span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;DHT.h&quot;</span>
+<span class="w">    </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;DHT.h&quot;</span>
 
-<span class="cp">#define DHTPIN 4     </span><span class="c1">// what digital pin we&#39;re connected to   // D2 - GPIO4</span>
-<span class="cp">#define DHTTYPE DHT11</span>
+<span class="w">    </span><span class="cp">#define DHTPIN 4     </span><span class="c1">// what digital pin we&#39;re connected to   // D2 - GPIO4</span>
+<span class="w">    </span><span class="cp">#define DHTTYPE DHT11</span>
 
-<span class="n">DHT</span><span class="w"> </span><span class="nf">dht</span><span class="p">(</span><span class="n">DHTPIN</span><span class="p">,</span><span class="w"> </span><span class="n">DHTTYPE</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DHT</span><span class="w"> </span><span class="nf">dht</span><span class="p">(</span><span class="n">DHTPIN</span><span class="p">,</span><span class="w"> </span><span class="n">DHTTYPE</span><span class="p">);</span>
 
-<span class="n">Ticker</span><span class="w"> </span><span class="n">ticker</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Ticker</span><span class="w"> </span><span class="n">ticker</span><span class="p">;</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">tick</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="c1">//toggle state</span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">digitalRead</span><span class="p">(</span><span class="n">BUILTIN_LED</span><span class="p">);</span><span class="w">  </span><span class="c1">// get the current state of GPIO1 pin</span>
-<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">BUILTIN_LED</span><span class="p">,</span><span class="w"> </span><span class="o">!</span><span class="n">state</span><span class="p">);</span><span class="w">     </span><span class="c1">// set pin to the opposite state</span>
-<span class="p">}</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">tick</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">//toggle state</span>
+<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">digitalRead</span><span class="p">(</span><span class="n">BUILTIN_LED</span><span class="p">);</span><span class="w">  </span><span class="c1">// get the current state of GPIO1 pin</span>
+<span class="w">      </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">BUILTIN_LED</span><span class="p">,</span><span class="w"> </span><span class="o">!</span><span class="n">state</span><span class="p">);</span><span class="w">     </span><span class="c1">// set pin to the opposite state</span>
+<span class="w">    </span><span class="p">}</span>
 
-<span class="c1">//gets called when WiFiManager enters configuration mode</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">configModeCallback</span><span class="w"> </span><span class="p">(</span><span class="n">WiFiManager</span><span class="w"> </span><span class="o">*</span><span class="n">myWiFiManager</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Entered config mode&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="n">softAPIP</span><span class="p">());</span>
-<span class="w">  </span><span class="c1">//if you used auto generated SSID, print it</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">myWiFiManager</span><span class="o">-&gt;</span><span class="n">getConfigPortalSSID</span><span class="p">());</span>
-<span class="w">  </span><span class="c1">//entered config mode, make led toggle faster</span>
-<span class="w">  </span><span class="n">ticker</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="n">tick</span><span class="p">);</span>
-<span class="p">}</span>
-
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="c1">// put your setup code here, to run once:</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
-
-<span class="w">  </span><span class="c1">//set led pin as output</span>
-<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">BUILTIN_LED</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-
-<span class="w">  </span><span class="c1">// start ticker with 0.5 because we start in AP mode and try to connect</span>
-<span class="w">  </span><span class="n">ticker</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="mf">0.6</span><span class="p">,</span><span class="w"> </span><span class="n">tick</span><span class="p">);</span>
-
-<span class="w">  </span><span class="c1">//WiFiManager</span>
-<span class="w">  </span><span class="c1">//Local intialization. Once its business is done, there is no need to keep it around</span>
-<span class="w">  </span><span class="n">WiFiManager</span><span class="w"> </span><span class="n">wifiManager</span><span class="p">;</span>
-<span class="w">  </span><span class="c1">//reset settings - for testing</span>
-<span class="w">  </span><span class="c1">//wifiManager.resetSettings();</span>
-
-<span class="w">  </span><span class="c1">//set callback that gets called when connecting to previous WiFi fails, and enters Access Point mode</span>
-<span class="w">  </span><span class="n">wifiManager</span><span class="p">.</span><span class="n">setAPCallback</span><span class="p">(</span><span class="n">configModeCallback</span><span class="p">);</span>
-
-<span class="w">  </span><span class="c1">//fetches ssid and pass and tries to connect</span>
-<span class="w">  </span><span class="c1">//if it does not connect it starts an access point with the specified name</span>
-<span class="w">  </span><span class="c1">//here  &quot;AutoConnectAP&quot;</span>
-<span class="w">  </span><span class="c1">//and goes into a blocking loop awaiting configuration</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">wifiManager</span><span class="p">.</span><span class="n">autoConnect</span><span class="p">(</span><span class="s">&quot;MeseIoT&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MeseIoT**&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;failed to connect and hit timeout&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="c1">//reset and try again, or maybe put it to deep sleep</span>
-<span class="w">    </span><span class="n">ESP</span><span class="p">.</span><span class="n">reset</span><span class="p">();</span>
-<span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
-
-<span class="w">  </span><span class="c1">//if you get here you have connected to the WiFi</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;connected...yeey :)&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">ticker</span><span class="p">.</span><span class="n">detach</span><span class="p">();</span>
-<span class="w">  </span><span class="c1">//keep LED on</span>
-<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">BUILTIN_LED</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
-
-<span class="w">  </span><span class="n">dht</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
-<span class="p">}</span>
+<span class="w">    </span><span class="c1">//gets called when WiFiManager enters configuration mode</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">configModeCallback</span><span class="w"> </span><span class="p">(</span><span class="n">WiFiManager</span><span class="w"> </span><span class="o">*</span><span class="n">myWiFiManager</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Entered config mode&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="n">softAPIP</span><span class="p">());</span>
+<span class="w">      </span><span class="c1">//if you used auto generated SSID, print it</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">myWiFiManager</span><span class="o">-&gt;</span><span class="n">getConfigPortalSSID</span><span class="p">());</span>
+<span class="w">      </span><span class="c1">//entered config mode, make led toggle faster</span>
+<span class="w">      </span><span class="n">ticker</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="n">tick</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
 
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="c1">// Wait a few seconds between measurements.</span>
-<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// put your setup code here, to run once:</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
 
-<span class="w">  </span><span class="c1">// Reading temperature or humidity takes about 250 milliseconds!</span>
-<span class="w">  </span><span class="c1">// Sensor readings may also be up to 2 seconds &#39;old&#39; (its a very slow sensor)</span>
-<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dht</span><span class="p">.</span><span class="n">readHumidity</span><span class="p">();</span>
-<span class="w">  </span><span class="c1">// Read temperature as Celsius (the default)</span>
-<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dht</span><span class="p">.</span><span class="n">readTemperature</span><span class="p">();</span>
-<span class="w">  </span><span class="c1">// Read temperature as Fahrenheit (isFahrenheit = true)</span>
-<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dht</span><span class="p">.</span><span class="n">readTemperature</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+<span class="w">      </span><span class="c1">//set led pin as output</span>
+<span class="w">      </span><span class="n">pinMode</span><span class="p">(</span><span class="n">BUILTIN_LED</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
 
-<span class="w">  </span><span class="c1">// Check if any reads failed and exit early (to try again).</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isnan</span><span class="p">(</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">isnan</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">isnan</span><span class="p">(</span><span class="n">f</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Failed to read from DHT sensor!&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="k">return</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span>
+<span class="w">      </span><span class="c1">// start ticker with 0.5 because we start in AP mode and try to connect</span>
+<span class="w">      </span><span class="n">ticker</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="mf">0.6</span><span class="p">,</span><span class="w"> </span><span class="n">tick</span><span class="p">);</span>
 
-<span class="w">  </span><span class="c1">// Compute heat index in Fahrenheit (the default)</span>
-<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">hif</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dht</span><span class="p">.</span><span class="n">computeHeatIndex</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">);</span>
-<span class="w">  </span><span class="c1">// Compute heat index in Celsius (isFahreheit = false)</span>
-<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">hic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dht</span><span class="p">.</span><span class="n">computeHeatIndex</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+<span class="w">      </span><span class="c1">//WiFiManager</span>
+<span class="w">      </span><span class="c1">//Local intialization. Once its business is done, there is no need to keep it around</span>
+<span class="w">      </span><span class="n">WiFiManager</span><span class="w"> </span><span class="n">wifiManager</span><span class="p">;</span>
+<span class="w">      </span><span class="c1">//reset settings - for testing</span>
+<span class="w">      </span><span class="c1">//wifiManager.resetSettings();</span>
 
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Humidity: &quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">h</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot; %</span><span class="se">\t</span><span class="s">&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Temperature: &quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot; *C &quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot; *F</span><span class="se">\t</span><span class="s">&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Heat index: &quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">hic</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot; *C &quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">hif</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot; *F&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="c1">//set callback that gets called when connecting to previous WiFi fails, and enters Access Point mode</span>
+<span class="w">      </span><span class="n">wifiManager</span><span class="p">.</span><span class="n">setAPCallback</span><span class="p">(</span><span class="n">configModeCallback</span><span class="p">);</span>
 
-<span class="w">  </span><span class="c1">///</span>
-<span class="w">  </span><span class="n">HTTPClient</span><span class="w"> </span><span class="n">http</span><span class="p">;</span>
-
-<span class="w">  </span><span class="c1">// configure server and url</span>
-<span class="w">  </span><span class="n">http</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="s">&quot;http://iothook.com/api/update/?api_key=58088bb005633bb39cdf3b7d&amp;field_1=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&amp;field_2=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="c1">//http.begin(&quot;192.168.1.12&quot;, 80, &quot;/test.html&quot;);</span>
-
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;[HTTP] GET...</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="c1">// start connection and send HTTP header</span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">httpCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">http</span><span class="p">.</span><span class="n">GET</span><span class="p">();</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">httpCode</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// HTTP header has been send and Server response header has been handled</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;[HTTP] GET... code: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">httpCode</span><span class="p">);</span>
-
-<span class="w">    </span><span class="c1">// file found at server</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">httpCode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">HTTP_CODE_OK</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">      </span><span class="c1">// get lenght of document (is -1 when Server sends no Content-Length header)</span>
-<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">http</span><span class="p">.</span><span class="n">getSize</span><span class="p">();</span>
-
-<span class="w">      </span><span class="c1">// create buffer for read</span>
-<span class="w">      </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">buff</span><span class="p">[</span><span class="mi">128</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">};</span>
-
-<span class="w">      </span><span class="c1">// get tcp stream</span>
-<span class="w">      </span><span class="n">WiFiClient</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">stream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">http</span><span class="p">.</span><span class="n">getStreamPtr</span><span class="p">();</span>
-
-<span class="w">      </span><span class="c1">// read all data from server</span>
-<span class="w">      </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">http</span><span class="p">.</span><span class="n">connected</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">len</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">-1</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// get available data size</span>
-<span class="w">        </span><span class="kt">size_t</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stream</span><span class="o">-&gt;</span><span class="n">available</span><span class="p">();</span>
-
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="c1">// read up to 128 byte</span>
-<span class="w">          </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stream</span><span class="o">-&gt;</span><span class="n">readBytes</span><span class="p">(</span><span class="n">buff</span><span class="p">,</span><span class="w"> </span><span class="p">((</span><span class="n">size</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">buff</span><span class="p">))</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">buff</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">size</span><span class="p">));</span>
-
-<span class="w">          </span><span class="c1">// write it to Serial</span>
-<span class="w">          </span><span class="n">Serial</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">buff</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
-
-<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">len</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">len</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
-<span class="w">          </span><span class="p">}</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">      </span><span class="c1">//fetches ssid and pass and tries to connect</span>
+<span class="w">      </span><span class="c1">//if it does not connect it starts an access point with the specified name</span>
+<span class="w">      </span><span class="c1">//here  &quot;AutoConnectAP&quot;</span>
+<span class="w">      </span><span class="c1">//and goes into a blocking loop awaiting configuration</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">wifiManager</span><span class="p">.</span><span class="n">autoConnect</span><span class="p">(</span><span class="s">&quot;MeseIoT&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MeseIoT**&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;failed to connect and hit timeout&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//reset and try again, or maybe put it to deep sleep</span>
+<span class="w">        </span><span class="n">ESP</span><span class="p">.</span><span class="n">reset</span><span class="p">();</span>
+<span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
 <span class="w">      </span><span class="p">}</span>
 
-<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">();</span>
-<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;[HTTP] connection closed or file end.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="c1">//if you get here you have connected to the WiFi</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;connected...yeey :)&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">ticker</span><span class="p">.</span><span class="n">detach</span><span class="p">();</span>
+<span class="w">      </span><span class="c1">//keep LED on</span>
+<span class="w">      </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">BUILTIN_LED</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
 
+<span class="w">      </span><span class="n">dht</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;[HTTP] GET... failed, error: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">http</span><span class="p">.</span><span class="n">errorToString</span><span class="p">(</span><span class="n">httpCode</span><span class="p">).</span><span class="n">c_str</span><span class="p">());</span>
-<span class="w">  </span><span class="p">}</span>
 
-<span class="w">  </span><span class="n">http</span><span class="p">.</span><span class="n">end</span><span class="p">();</span>
-<span class="w">  </span><span class="c1">////</span>
-<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">13000</span><span class="p">);</span>
-<span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// Wait a few seconds between measurements.</span>
+<span class="w">      </span><span class="n">delay</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+
+<span class="w">      </span><span class="c1">// Reading temperature or humidity takes about 250 milliseconds!</span>
+<span class="w">      </span><span class="c1">// Sensor readings may also be up to 2 seconds &#39;old&#39; (its a very slow sensor)</span>
+<span class="w">      </span><span class="kt">float</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dht</span><span class="p">.</span><span class="n">readHumidity</span><span class="p">();</span>
+<span class="w">      </span><span class="c1">// Read temperature as Celsius (the default)</span>
+<span class="w">      </span><span class="kt">float</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dht</span><span class="p">.</span><span class="n">readTemperature</span><span class="p">();</span>
+<span class="w">      </span><span class="c1">// Read temperature as Fahrenheit (isFahrenheit = true)</span>
+<span class="w">      </span><span class="kt">float</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dht</span><span class="p">.</span><span class="n">readTemperature</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+
+<span class="w">      </span><span class="c1">// Check if any reads failed and exit early (to try again).</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isnan</span><span class="p">(</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">isnan</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">isnan</span><span class="p">(</span><span class="n">f</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Failed to read from DHT sensor!&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="c1">// Compute heat index in Fahrenheit (the default)</span>
+<span class="w">      </span><span class="kt">float</span><span class="w"> </span><span class="n">hif</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dht</span><span class="p">.</span><span class="n">computeHeatIndex</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">);</span>
+<span class="w">      </span><span class="c1">// Compute heat index in Celsius (isFahreheit = false)</span>
+<span class="w">      </span><span class="kt">float</span><span class="w"> </span><span class="n">hic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dht</span><span class="p">.</span><span class="n">computeHeatIndex</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Humidity: &quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">h</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot; %</span><span class="se">\t</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Temperature: &quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot; *C &quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot; *F</span><span class="se">\t</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Heat index: &quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">hic</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot; *C &quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">hif</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot; *F&quot;</span><span class="p">);</span>
+
+<span class="w">      </span><span class="c1">///</span>
+<span class="w">      </span><span class="n">HTTPClient</span><span class="w"> </span><span class="n">http</span><span class="p">;</span>
+
+<span class="w">      </span><span class="c1">// configure server and url</span>
+<span class="w">      </span><span class="n">http</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="s">&quot;http://iothook.com/api/update/?api_key=58088bb005633bb39cdf3b7d&amp;field_1=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&amp;field_2=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="c1">//http.begin(&quot;192.168.1.12&quot;, 80, &quot;/test.html&quot;);</span>
+
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;[HTTP] GET...</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="c1">// start connection and send HTTP header</span>
+<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">httpCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">http</span><span class="p">.</span><span class="n">GET</span><span class="p">();</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">httpCode</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// HTTP header has been send and Server response header has been handled</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;[HTTP] GET... code: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">httpCode</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// file found at server</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">httpCode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">HTTP_CODE_OK</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">          </span><span class="c1">// get lenght of document (is -1 when Server sends no Content-Length header)</span>
+<span class="w">          </span><span class="kt">int</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">http</span><span class="p">.</span><span class="n">getSize</span><span class="p">();</span>
+
+<span class="w">          </span><span class="c1">// create buffer for read</span>
+<span class="w">          </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">buff</span><span class="p">[</span><span class="mi">128</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">};</span>
+
+<span class="w">          </span><span class="c1">// get tcp stream</span>
+<span class="w">          </span><span class="n">WiFiClient</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">stream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">http</span><span class="p">.</span><span class="n">getStreamPtr</span><span class="p">();</span>
+
+<span class="w">          </span><span class="c1">// read all data from server</span>
+<span class="w">          </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">http</span><span class="p">.</span><span class="n">connected</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">len</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">-1</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// get available data size</span>
+<span class="w">            </span><span class="kt">size_t</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stream</span><span class="o">-&gt;</span><span class="n">available</span><span class="p">();</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">              </span><span class="c1">// read up to 128 byte</span>
+<span class="w">              </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stream</span><span class="o">-&gt;</span><span class="n">readBytes</span><span class="p">(</span><span class="n">buff</span><span class="p">,</span><span class="w"> </span><span class="p">((</span><span class="n">size</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">buff</span><span class="p">))</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">buff</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">size</span><span class="p">));</span>
+
+<span class="w">              </span><span class="c1">// write it to Serial</span>
+<span class="w">              </span><span class="n">Serial</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">buff</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+
+<span class="w">              </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">len</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">len</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<span class="w">              </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">          </span><span class="p">}</span>
+
+<span class="w">          </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">();</span>
+<span class="w">          </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;[HTTP] connection closed or file end.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;[HTTP] GET... failed, error: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">http</span><span class="p">.</span><span class="n">errorToString</span><span class="p">(</span><span class="n">httpCode</span><span class="p">).</span><span class="n">c_str</span><span class="p">());</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="n">http</span><span class="p">.</span><span class="n">end</span><span class="p">();</span>
+<span class="w">      </span><span class="c1">////</span>
+<span class="w">      </span><span class="n">delay</span><span class="p">(</span><span class="mi">13000</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
 </pre></div>
+</div>
 </div>
 </section>
 <section id="nodemcu-send-data-in-get">
@@ -992,8 +1008,8 @@ In the example, random numbers between 0-100 were generated and the device was s
 <p>With the IOThook Api v1.4 update, it allows sending data with the GET method.</p>
 <p>You can find this example and others at <a class="reference external" href="https://github.com/electrocoder/IoThook">IOTHOOK Git</a></p>
 <p>Here is an example of sending data using the Get method with NodeMCU:</p>
-<div class="literal-block-wrapper docutils container" id="id13">
-<div class="code-block-caption"><span class="caption-text">nodemcu_send_data_get.ino</span><a class="headerlink" href="#id13" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id18">
+<div class="code-block-caption"><span class="caption-text">nodemcu_send_data_get.ino</span><a class="headerlink" href="#id18" title="Permalink to this code">¶</a></div>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// 04.05.2023</span>
 <span class="c1">// NodeMCU Send Data GET Method</span>
 <span class="c1">// NodeMCU ESP8266</span>
@@ -1122,40 +1138,78 @@ In the example, random numbers between 0-100 were generated and the device was s
 <p>With the IOThook Api v1.4 update, it allows sending data with the GET method.</p>
 <p>You can find this example and others at <a class="reference external" href="https://github.com/electrocoder/IoThook">IOTHOOK Git</a></p>
 <p>Here is an example of sending data using the Get method with Go Language:</p>
+<section id="go-language-send-data-with-get-method">
+<h4>Go Language Send Data with GET Method<a class="headerlink" href="#go-language-send-data-with-get-method" title="Permalink to this heading">¶</a></h4>
+<div class="literal-block-wrapper docutils container" id="id19">
+<div class="code-block-caption"><span class="caption-text">send_data_in_get.go</span><a class="headerlink" href="#id19" title="Permalink to this code">¶</a></div>
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="c1">// 04.05.2023</span>
+<span class="c1">// GO language send data with GET method</span>
+
+<span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="w">	</span><span class="s">&quot;io/ioutil&quot;</span>
+<span class="w">	</span><span class="s">&quot;log&quot;</span>
+<span class="w">	</span><span class="s">&quot;net/http&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="nx">resp</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s">&quot;http://iothook.com/api/update?api_key=58088bb005633bb39cdf3b7d&amp;field_1=10&amp;field_2=2&amp;field_3=3&quot;</span><span class="p">)</span>
+<span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatalln</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="c1">//We Read the response body on the line below.</span>
+<span class="w">	</span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ioutil</span><span class="p">.</span><span class="nx">ReadAll</span><span class="p">(</span><span class="nx">resp</span><span class="p">.</span><span class="nx">Body</span><span class="p">)</span>
+<span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatalln</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="c1">//Convert the body to type string</span>
+<span class="w">	</span><span class="nx">sb</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">string</span><span class="p">(</span><span class="nx">body</span><span class="p">)</span>
+<span class="w">	</span><span class="nx">log</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="nx">sb</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="go-language-send-data-with-get-method-2">
+<h4>Go Language Send Data with GET Method 2<a class="headerlink" href="#go-language-send-data-with-get-method-2" title="Permalink to this heading">¶</a></h4>
+<div class="literal-block-wrapper docutils container" id="id20">
+<div class="code-block-caption"><span class="caption-text">send_data_in_get_2.go</span><a class="headerlink" href="#id20" title="Permalink to this code">¶</a></div>
 <div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="c1">// 04 Eylul 2017</span>
 <span class="c1">// Guncelleme: 19 Agustos 2019</span>
 <span class="c1">// Sahin MERSIN</span>
 <span class="c1">// iothook.com</span>
 <span class="c1">// postman kullanilarak olusturulmustur</span>
 
-
 <span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
 
-<span class="kn">import</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="s">&quot;fmt&quot;</span>
-<span class="w">    </span><span class="s">&quot;net/http&quot;</span>
-<span class="w">    </span><span class="s">&quot;io/ioutil&quot;</span>
-<span class="p">)</span>
+<span class="w">    </span><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span><span class="s">&quot;fmt&quot;</span>
+<span class="w">        </span><span class="s">&quot;net/http&quot;</span>
+<span class="w">        </span><span class="s">&quot;io/ioutil&quot;</span>
+<span class="w">    </span><span class="p">)</span>
 
-<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">    </span><span class="nx">url</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;http://iothook.com/api/update?api_key=58088bb005633bb39cdf3b7d&amp;field_1=10&amp;field_2=2&amp;field_3=3&quot;</span>
+<span class="w">        </span><span class="nx">url</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;http://iothook.com/api/update?api_key=58088bb005633bb39cdf3b7d&amp;field_1=10&amp;field_2=2&amp;field_3=3&quot;</span>
 
-<span class="w">    </span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="s">&quot;GET&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">url</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span>
+<span class="w">        </span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="s">&quot;GET&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">url</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span>
 
-<span class="w">    </span><span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">&quot;cache-control&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;no-cache&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">&quot;cache-control&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;no-cache&quot;</span><span class="p">)</span>
 
-<span class="w">    </span><span class="nx">res</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">DefaultClient</span><span class="p">.</span><span class="nx">Do</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span>
+<span class="w">        </span><span class="nx">res</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">DefaultClient</span><span class="p">.</span><span class="nx">Do</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span>
 
-<span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span>
-<span class="w">    </span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ioutil</span><span class="p">.</span><span class="nx">ReadAll</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">)</span>
+<span class="w">        </span><span class="k">defer</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span>
+<span class="w">        </span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ioutil</span><span class="p">.</span><span class="nx">ReadAll</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">)</span>
 
-<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span>
-<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">body</span><span class="p">))</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">body</span><span class="p">))</span>
 
-<span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
 </pre></div>
 </div>
+</div>
+</section>
 </section>
 <section id="php-send-data-in-get">
 <h3>PHP Send Data in GET<a class="headerlink" href="#php-send-data-in-get" title="Permalink to this heading">¶</a></h3>
@@ -1347,7 +1401,11 @@ In the example, random numbers between 0-100 were generated and the device was s
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#arduino-esp8266-nodemcu-send-data-in-get">Arduino, ESP8266, Nodemcu Send Data in GET</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#nodemcu-send-data-in-get">NodeMCU Send Data in GET</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#go-send-data-in-get">GO Send Data in GET</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#go-send-data-in-get">GO Send Data in GET</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#go-language-send-data-with-get-method">Go Language Send Data with GET Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#go-language-send-data-with-get-method-2">Go Language Send Data with GET Method 2</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#php-send-data-in-get">PHP Send Data in GET</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#nodejs-send-data-in-get">NodeJS Send Data in GET</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#javascript-jquery-ajax-send-data-in-get">Javascript Jquery Ajax Send Data in GET</a></li>
