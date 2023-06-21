@@ -8,7 +8,7 @@ For example; Assume that our device's name "Temperature sensor" and it will be i
 
 
 Data Retrieving with Python 2, Python 3 Json
--------------------------------------
+--------------------------------------------
 Get Example with Python Json:
 The number of data specified by *results* was read,by using the *requests.get* method from the IOTHOOK server
 Up to 99 pieces of data can be read with the *results* variable. If the *results* variable is not specified, only 1 data can be read.
@@ -77,7 +77,7 @@ You can find this example and others on the `IOTHOOK Git`_ page.
     print(data[0]['id'])
 
 Getting the First Data with Python 2, Python 3 Json
--------------------------------------------
+---------------------------------------------------
 Python Getting the First Data, Get Example with Json:
 
 You can find this example and others on the `IOTHOOK Git`_ page.
@@ -137,7 +137,7 @@ You can find this example and others on the `IOTHOOK Git`_ page.
 
 
 Getting the Last Data with Python 2, Python 3 Json
--------------------------------------------
+--------------------------------------------------
 
 Python Getting the Last Data, Get Example with Json:
 
@@ -195,7 +195,7 @@ You can find this example and others on the `IOTHOOK Git`_ page.
 
 
 Fetching Data in JSON Format with C#
---------------------------------
+------------------------------------
 
 It has been produced with the GET method using Postman so that the IoThook user can use the data of his device.
 
@@ -252,7 +252,7 @@ You can find this example and others on the `IOTHOOK Git`_ page.
 
 
 IOT Data Fetching with GO
---------------------
+-------------------------
 
 It has been produced with the GET method using Postman so that the IoThook user can use the data of his device.
 
@@ -296,7 +296,7 @@ You can find this example and others on the `IOTHOOK Git`_ page.
 
 
 IOT Data Fetching with JAVA
-----------------------
+---------------------------
 
 It has been produced with the GET method using Postman so that the IoThook user can use the data of his device.
 
@@ -324,7 +324,7 @@ You can find this example and others on the `IOTHOOK Git`_ page.
 
 
 IOT Data Fetching with PHP
----------------------
+--------------------------
 
 It has been produced with the GET method using Postman so that the IoThook user can use the data of his device.
 
@@ -364,7 +364,7 @@ You can find this example and others on the `IOTHOOK Git`_ page.
 
 
 IOT Data Fetching with Ruby
----------------------
+---------------------------
 
 It has been produced with the GET method using Postman so that the IoThook user can use the data of his device.
 
@@ -394,7 +394,7 @@ You can find this example and others on the `IOTHOOK Git`_ page.
 
 
 IOT Data Fetching with Javascript Ajax
----------------------
+--------------------------------------
 
 It has been produced with the GET method using Postman so that the IoThook user can use the data of his device.
 
@@ -425,7 +425,7 @@ You can find this example and others on the `IOTHOOK Git`_ page.
 
 
 IOT Data Fetching with Python PySide2
----------------------
+-------------------------------------
 
 PySide2 is the official Python module that provides access to the Qt 5.12+ framework for Python projects. Before using PySide2, the following modules need to be installed
 
