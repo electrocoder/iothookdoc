@@ -23,7 +23,7 @@ The following output is obtained, by running the following Python script.
 
 You can find this example and others on the `IOTHOOK Git`_ page.
 
-.. _IOTHOOK Git: https://github.com/electrocoder/IOThook/tree/master/examples/
+.. _IOTHOOK Git: https://github.com/electrocoder/iothookdoc/tree/main/examples/
 
 .. code-block:: python
 
