@@ -6,9 +6,9 @@ We need API KEY information for retrieving the data of temperature, damp, voltag
 
 For example; Assume that our device's name "Temperature sensor" and it will be in the device additionally assume that our sensors "temperature" and "humidity"
 
-
 Data Retrieving with Python 2, Python 3 Json
 --------------------------------------------
+
 Get Example with Python Json:
 The number of data specified by *results* was read,by using the *requests.get* method from the IOTHOOK server
 Up to 99 pieces of data can be read with the *results* variable. If the *results* variable is not specified, only 1 data can be read.
@@ -78,6 +78,7 @@ You can find this example and others on the `IOTHOOK Git`_ page.
 
 Getting the First Data with Python 2, Python 3 Json
 ---------------------------------------------------
+
 Python Getting the First Data, Get Example with Json:
 
 You can find this example and others on the `IOTHOOK Git`_ page.
@@ -293,8 +294,6 @@ You can find this example and others on the `IOTHOOK Git`_ page.
 
     }
 
-
-
 IOT Data Fetching with JAVA
 ---------------------------
 
@@ -320,8 +319,6 @@ You can find this example and others on the `IOTHOOK Git`_ page.
       .build();
 
     Response response = client.newCall(request).execute();
-
-
 
 IOT Data Fetching with PHP
 --------------------------
@@ -361,7 +358,6 @@ You can find this example and others on the `IOTHOOK Git`_ page.
     } catch (HttpException $ex) {
       echo $ex;
     }
-
 
 IOT Data Fetching with Ruby
 ---------------------------
@@ -422,7 +418,6 @@ You can find this example and others on the `IOTHOOK Git`_ page.
     $.ajax(settings).done(function (response) {
       console.log(response);
     });
-
 
 IOT Data Fetching with Python PySide2
 -------------------------------------

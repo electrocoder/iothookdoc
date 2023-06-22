@@ -5,17 +5,18 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>How to Find IoT Device IP Address &#8212; IoTHook IoT Internet Of Things Arduino, ESP, Raspberry Pi</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
     
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/bizstyle.js"></script>
-    <link rel="icon" href="_static/internet-of-things.png"/>
+    <link rel="shortcut icon" href="_static/internet-of-things.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Finding location from IoT Device IP address" href="get-ip-to-location-address.html" />
@@ -48,7 +49,7 @@
           <div class="body" role="main">
             
   <section id="how-to-find-iot-device-ip-address">
-<h1>How to Find IoT Device IP Address<a class="headerlink" href="#how-to-find-iot-device-ip-address" title="Permalink to this heading">¶</a></h1>
+<h1>How to Find IoT Device IP Address<a class="headerlink" href="#how-to-find-iot-device-ip-address" title="Permalink to this headline">¶</a></h1>
 <p>The IP address of the IoT (Internet of Things) device is the unique identifier of the device on the network. The
 IP address allows the device to connect to the network and allows it to communicate with other devices. In
 some cases, we need the Global IP address of the IoT device. In order to PING the device and monitor the device, it
@@ -67,13 +68,13 @@ users to remotely access the device so that the device can be controlled or data
 <p>To summarize, the IP address of the IoT device provides the device’s unique identity on the network
 and able to communicate with other devices. It also simplifies device discovery, management, and remote access.</p>
 <section id="iothook-iot-device-get-global-ip-address-api">
-<h2>IoTHook IoT Device Get Global IP Address API<a class="headerlink" href="#iothook-iot-device-get-global-ip-address-api" title="Permalink to this heading">¶</a></h2>
+<h2>IoTHook IoT Device Get Global IP Address API<a class="headerlink" href="#iothook-iot-device-get-global-ip-address-api" title="Permalink to this headline">¶</a></h2>
 <p>To find the IP address of the IoT device, you need to send a GET request from your Device to the IoTHook site.
 You can find the IoT IP address by making a GET request to <a class="reference external" href="https://iothook.com/api/find-ip-address/">https://iothook.com/api/find-ip-address/</a> or
 <a class="reference external" href="http://iothook.com/api/find-ip-address/">http://iothook.com/api/find-ip-address/</a> .</p>
 <p>When IoTHook requests a GET, it can sample the IP address from JSON format as follows. {“ip”:”184.53.56.28”}</p>
 <section id="iothook-iot-device-get-global-ip-address-api-arduino-ethernet-shield">
-<h3>IoTHook IoT Device Get Global IP Address API Arduino Ethernet Shield<a class="headerlink" href="#iothook-iot-device-get-global-ip-address-api-arduino-ethernet-shield" title="Permalink to this heading">¶</a></h3>
+<h3>IoTHook IoT Device Get Global IP Address API Arduino Ethernet Shield<a class="headerlink" href="#iothook-iot-device-get-global-ip-address-api-arduino-ethernet-shield" title="Permalink to this headline">¶</a></h3>
 <div class="literal-block-wrapper docutils container" id="arduino-ethernet-shield-get-ip-ino">
 <div class="code-block-caption"><span class="caption-text">arduino_ethernet_shield_get_ip.ino</span><a class="headerlink" href="#arduino-ethernet-shield-get-ip-ino" title="Permalink to this code">¶</a></div>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
@@ -84,94 +85,94 @@ You can find the IoT IP address by making a GET request to <a class="reference e
 <span class="cm">  mesebilisim.com</span>
 <span class="cm">  30.05.2023</span>
 
-<span class="cm">*/</span>
+<span class="cm">*/</span><span class="w"></span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SPI.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Ethernet.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SPI.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Ethernet.h&gt;</span><span class="cp"></span>
 
 
-<span class="n">byte</span><span class="w"> </span><span class="n">mac</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="mh">0xDE</span><span class="p">,</span><span class="w"> </span><span class="mh">0xAD</span><span class="p">,</span><span class="w"> </span><span class="mh">0xBE</span><span class="p">,</span><span class="w"> </span><span class="mh">0xEF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFE</span><span class="p">,</span><span class="w"> </span><span class="mh">0xED</span>
-<span class="p">};</span>
+<span class="n">byte</span><span class="w"> </span><span class="n">mac</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="mh">0xDE</span><span class="p">,</span><span class="w"> </span><span class="mh">0xAD</span><span class="p">,</span><span class="w"> </span><span class="mh">0xBE</span><span class="p">,</span><span class="w"> </span><span class="mh">0xEF</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFE</span><span class="p">,</span><span class="w"> </span><span class="mh">0xED</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
 
-<span class="n">IPAddress</span><span class="w"> </span><span class="nf">ip</span><span class="p">(</span><span class="mi">192</span><span class="p">,</span><span class="w"> </span><span class="mi">168</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">177</span><span class="p">);</span>
-<span class="n">IPAddress</span><span class="w"> </span><span class="nf">myDns</span><span class="p">(</span><span class="mi">192</span><span class="p">,</span><span class="w"> </span><span class="mi">168</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="n">IPAddress</span><span class="w"> </span><span class="nf">ip</span><span class="p">(</span><span class="mi">192</span><span class="p">,</span><span class="w"> </span><span class="mi">168</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">177</span><span class="p">);</span><span class="w"></span>
+<span class="n">IPAddress</span><span class="w"> </span><span class="nf">myDns</span><span class="p">(</span><span class="mi">192</span><span class="p">,</span><span class="w"> </span><span class="mi">168</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
 
-<span class="n">EthernetClient</span><span class="w"> </span><span class="n">client</span><span class="p">;</span>
+<span class="n">EthernetClient</span><span class="w"> </span><span class="n">client</span><span class="p">;</span><span class="w"></span>
 
-<span class="kt">char</span><span class="w"> </span><span class="n">server</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;iothook.com&quot;</span><span class="p">;</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">server</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;iothook.com&quot;</span><span class="p">;</span><span class="w"></span>
 
-<span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">lastConnectionTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="k">const</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">postingInterval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">lastConnectionTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">postingInterval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w"></span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
-<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">Serial</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">Serial</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Initialize Ethernet with DHCP:&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Ethernet</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">mac</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Failed to configure Ethernet using DHCP&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Initialize Ethernet with DHCP:&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Ethernet</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">mac</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Failed to configure Ethernet using DHCP&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="c1">// Check for Ethernet hardware present</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Ethernet</span><span class="p">.</span><span class="n">hardwareStatus</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">EthernetNoHardware</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Ethernet shield was not found.  Sorry, can&#39;t run without hardware. :(&quot;</span><span class="p">);</span>
-<span class="w">      </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nb">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Ethernet</span><span class="p">.</span><span class="n">linkStatus</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LinkOFF</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Ethernet cable is not connected.&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Ethernet</span><span class="p">.</span><span class="n">hardwareStatus</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">EthernetNoHardware</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Ethernet shield was not found.  Sorry, can&#39;t run without hardware. :(&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nb">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Ethernet</span><span class="p">.</span><span class="n">linkStatus</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LinkOFF</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Ethernet cable is not connected.&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="n">Ethernet</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">mac</span><span class="p">,</span><span class="w"> </span><span class="n">ip</span><span class="p">,</span><span class="w"> </span><span class="n">myDns</span><span class="p">);</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;My IP address: &quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">Ethernet</span><span class="p">.</span><span class="n">localIP</span><span class="p">());</span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;  DHCP assigned IP &quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">Ethernet</span><span class="p">.</span><span class="n">localIP</span><span class="p">());</span>
-<span class="w">  </span><span class="p">}</span>
+<span class="w">    </span><span class="n">Ethernet</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">mac</span><span class="p">,</span><span class="w"> </span><span class="n">ip</span><span class="p">,</span><span class="w"> </span><span class="n">myDns</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;My IP address: &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">Ethernet</span><span class="p">.</span><span class="n">localIP</span><span class="p">());</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;  DHCP assigned IP &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">Ethernet</span><span class="p">.</span><span class="n">localIP</span><span class="p">());</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
 
-<span class="p">}</span>
-
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">client</span><span class="p">.</span><span class="n">available</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">read</span><span class="p">();</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
-
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">millis</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">lastConnectionTime</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">postingInterval</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">httpRequest</span><span class="p">();</span>
-<span class="w">  </span><span class="p">}</span>
-
-<span class="p">}</span>
+<span class="p">}</span><span class="w"></span>
 
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">httpRequest</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-<span class="w">  </span><span class="n">client</span><span class="p">.</span><span class="n">stop</span><span class="p">();</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">client</span><span class="p">.</span><span class="n">available</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">read</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">millis</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">lastConnectionTime</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">postingInterval</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">httpRequest</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
 
 
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">client</span><span class="p">.</span><span class="n">connect</span><span class="p">(</span><span class="n">server</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;connecting...&quot;</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">httpRequest</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-<span class="w">    </span><span class="n">client</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;GET /api/find-ip-address/ HTTP/1.1&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="n">client</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Host: www.iothook.com&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="n">client</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;User-Agent: arduino-ethernet&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="n">client</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Connection: close&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="n">client</span><span class="p">.</span><span class="n">println</span><span class="p">();</span>
+<span class="w">  </span><span class="n">client</span><span class="p">.</span><span class="n">stop</span><span class="p">();</span><span class="w"></span>
 
 
-<span class="w">    </span><span class="n">lastConnectionTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">millis</span><span class="p">();</span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;connection failed&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">client</span><span class="p">.</span><span class="n">connect</span><span class="p">(</span><span class="n">server</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;connecting...&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">client</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;GET /api/find-ip-address/ HTTP/1.1&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">client</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Host: www.iothook.com&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">client</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;User-Agent: arduino-ethernet&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">client</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Connection: close&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">client</span><span class="p">.</span><span class="n">println</span><span class="p">();</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="n">lastConnectionTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">millis</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;connection failed&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -224,7 +225,7 @@ You can find the IoT IP address by making a GET request to <a class="reference e
     </form>
     </div>
 </div>
-<script>document.getElementById('searchbox').style.display = "block"</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -247,7 +248,7 @@ You can find the IoT IP address by making a GET request to <a class="reference e
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2023, iothook.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
     </div>
   </body>
 </html>

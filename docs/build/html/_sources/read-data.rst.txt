@@ -2,29 +2,26 @@
 Read Data
 *********
 
-Iot cihazından gönderilen ısı, nem, voltaj, ışık gibi değerleri iothook data servisinden çekebilmek için öncelikle
-cihaz API KEY bilgisine ihtiyaç vardır. Iot cihazından gelen veriler, Arduino, Raspberry Pi, Android, iOS gibi mobil
-cihazınızdan veya web sitenizden izlenebilir.
+We need API KEY information for retrieving the data of temperature, damp, voltage, light etc. values like that which are sending Iot device.Datas which are sending from your Iot device can monitore with mobile devices like Pi, Android, iOs or your website.
 
-Örneğin; Cihaz adımız "Temperature sensor" olarak belirlenmiş ve cihaz içerisinde bulunacak
-sensörlerimiz "temperature" ve "humidity" olsun.
+For example; Assume that our device's name "Temperature sensor" and it will be in the device additionally assume that our sensors "temperature" and "humidity"
 
-Python 2, Python 3 Json ile Veri Alma
--------------------------------------
+Data Retrieving with Python 2, Python 3 Json
+--------------------------------------------
 
-Python Json ile Get Örneği:
+Get Example with Python Json:
+The number of data specified by *results* was read,by using the *requests.get* method from the IOTHOOK server
+Up to 99 pieces of data can be read with the *results* variable. If the *results* variable is not specified, only 1 data can be read.
+The format of readed data is *json*
 
-IOTHOOK sunucusundan *requests.get* metodu kullanılarak *results* ile belirtilen sayı kadar veri okuması yapılmıştır.
-*results* değişkeni ile en fazla 99 adet veri okunabilir. *results* değişkeni belirtilmez ise sadece 1 veri okunabilir.
-Okunan verinin formatı *json* şeklindedir.
-
-Aşağıdaki Python scriptinin çalıştırılması ile şu çıktı elde edilir.
+The following output is obtained, by running the following Python script.
 
     >>> [{'id': 502483, 'device': 17, 'field_1': '46', 'field_2': '6.70', 'field_3': None, 'field_4': None, 'field_5': None, 'field_6': None, 'field_7': None, 'field_8': None, 'pub_date': '2019-08-31T00:57:27.086837', 'remote_address': '88.242.132.150&python-requests/2.12.4&HTTP/1.1'}]
     >>> 1
     >>> 502483
 
-Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
+
+You can find this example and others on the `IOTHOOK Git`_ page.
 
 .. _IOTHOOK Git: https://github.com/electrocoder/IOThook/tree/master/examples/
 
@@ -33,28 +30,30 @@ Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
     # -*- coding: utf-8 -*-
 
     """
-      Python 2, Python 3 ile IoThook REST Api Testi
+       IoThook REST Api Test with Python 2, Python 3 
 
-      Bu ornek IotHook servisine veri almak/gondermek icin baslangic seviyesinde
-      testlerin yapilmasini amaclamaktadir.
+      This example is at the beginner level for sending/receiving data to the IotHook service.
+      it aims to carry out tests.
 
-      10 Mayıs 2017
-      Guncelleme: 19 Agustos 2019
+      10 May 2017
+      Update: 19 August 2019
       Sahin MERSIN
 
-      Daha fazlasi icin
+      For more
 
       http://www.iothook.com
-      ve
+      and
       https://github.com/electrocoder/iotHook
 
-      sitelerine gidiniz.
+      go to theese sites
 
-      Sorular ve destek talepleri icin
+      For questions and support requests
       https://github.com/electrocoder/iotHook/issues
-      sayfasindan veya Meşe Bilişim den yardım alabilirsiniz.
+      you can take support Mese Bilisim or above github page.
+      
 
-      Yayin : http://mesebilisim.com
+      Broadcasting : http://mesebilisim.com
+
 
       Licensed under the Apache License, Version 2.0 (the "License").
       You may not use this file except in compliance with the License.
@@ -67,7 +66,7 @@ Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
     import requests
 
     # read api key
-    API_KEY = 'ceb0024b84ff6fb7527d5506' # demo hesap #17 random test
+    API_KEY = 'ceb0024b84ff6fb7527d5506' # demo account #17 random test
 
     url = 'http://iothook.com/api/device/?api_key=' + API_KEY + "&results=1"
 
@@ -77,41 +76,42 @@ Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
     print(len(data))
     print(data[0]['id'])
 
+Getting the First Data with Python 2, Python 3 Json
+---------------------------------------------------
 
-Python 2, Python 3 Json ile İlk Veriyi Alma
--------------------------------------------
+Python Getting the First Data, Get Example with Json:
 
-Python İlk Veriyi Alma, Json ile Get Örneği:
-
-Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
+You can find this example and others on the `IOTHOOK Git`_ page.
 
 .. code-block:: python
 
     # -*- coding: utf-8 -*-
 
     """
-      Python 2, Python 3 ile IoThook REST Api Testi
+      IoThook REST Api Test with Python 2, Python 3 
 
-      Bu ornek IotHook servisine veri almak/gondermek icin baslangic seviyesinde
-      testlerin yapilmasini amaclamaktadir.
+      This example is at the beginner level for sending/receiving data to the IotHook service.
+      it aims to carry out tests.
 
-      10 Mayıs 2017
-      Guncelleme: 19 Agustos 2019
+      10 May 2017
+      Update: 19 August 2019
       Sahin MERSIN
 
-      Daha fazlasi icin
+      For more
 
       http://www.iothook.com
-      ve
+      and
       https://github.com/electrocoder/iotHook
 
-      sitelerine gidiniz.
+      go to theese sites
 
-      Sorular ve destek talepleri icin
+  
+      For questions and support requests
       https://github.com/electrocoder/iotHook/issues
-      sayfasindan veya Meşe Bilişim den yardım alabilirsiniz.
+      you can take support Mese Bilisim or above github page.
+      
 
-      Yayin : http://mesebilisim.com
+      Broadcasting : http://mesebilisim.com
 
       Licensed under the Apache License, Version 2.0 (the "License").
       You may not use this file except in compliance with the License.
@@ -124,7 +124,7 @@ Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
     import requests
 
     # read api key
-    API_KEY = '76d2628fd60903d3c1f7f8a0' # demo hesap #24 Temperature sensor
+    API_KEY = '76d2628fd60903d3c1f7f8a0' # demo account #24 Temperature sensor
 
     url = 'https://iothook.com/api/device/?api_key=' + API_KEY + "&results=2"
 
@@ -137,40 +137,40 @@ Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
     print(data['datas'][1]['pub_date'])
 
 
-Python 2, Python 3 Json ile Son Veriyi Alma
--------------------------------------------
+Getting the Last Data with Python 2, Python 3 Json
+--------------------------------------------------
 
-Python Son Veriyi Alma, Json ile Get Örneği:
+Python Getting the Last Data, Get Example with Json:
 
-Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
+You can find this example and others on the `IOTHOOK Git`_ page.
 
 .. code-block:: python
 
     # -*- coding: utf-8 -*-
 
     """
-      Python 2, Python 3 ile IoThook REST Api Testi
+        IoThook REST Api Test with Python 2, Python 3 
 
-      Bu ornek IotHook servisine veri almak/gondermek icin baslangic seviyesinde
-      testlerin yapilmasini amaclamaktadir.
+      This example is at the beginner level for sending/receiving data to the IotHook service.
+      it aims to carry out tests.
 
-      10 Mayıs 2017
-      Guncelleme: 19 Agustos 2019
+      10 May 2017
+      Update: 19 August 2019
       Sahin MERSIN
 
-      Daha fazlasi icin
+      For more
 
       http://www.iothook.com
-      ve
+      and
       https://github.com/electrocoder/iotHook
 
-      sitelerine gidiniz.
+      go to theese sites
 
-      Sorular ve destek talepleri icin
+      For questions and support requests
       https://github.com/electrocoder/iotHook/issues
-      sayfasindan veya Meşe Bilişim den yardım alabilirsiniz.
-
-      Yayin : http://mesebilisim.com
+      
+      you can take support Mese Bilisim or above github page.
+      Broadcasting : http://mesebilisim.com
 
       Licensed under the Apache License, Version 2.0 (the "License").
       You may not use this file except in compliance with the License.
@@ -183,7 +183,7 @@ Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
     import requests
 
     # read api key
-    API_KEY = '76d2628fd60903d3c1f7f8a0' # demo hesap #24 Temperature sensor
+    API_KEY = '76d2628fd60903d3c1f7f8a0' # demo account #24 Temperature sensor
 
     url = 'https://iothook.com/api/device/?api_key=' + API_KEY
 
@@ -194,40 +194,41 @@ Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
     print(data['datas'][0]['pub_date'])
 
 
-C# ile Json Formatında Veri Alma
---------------------------------
 
-IoThook kullanıcısının cihazına ait veriyi alabilmesi için GET metodu kullanılarak Postman ile üretilmiştir.
+Fetching Data in JSON Format with C#
+------------------------------------
 
-Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
+It has been produced with the GET method using Postman so that the IoThook user can use the data of his device.
+
+You can find this example and others on the `IOTHOOK Git`_ page.
 
 .. code-block:: c#
 
     /*
-      C# ile IoThook REST Api Testi
+      Testing IoThook REST Api with C#
 
-      Bu örnekde CSharp ile cihaz datalarının get metodu ile alınması gerçekleştirilmiştir.
+      In this example, device data is retrieved with CSharp with the get method.
 
-      Bu ornek IotHook servisine veri almak/gondermek icin baslangic seviyesinde
-      testlerin yapilmasini amaclamaktadir.
+      This example is at the beginner level for sending/receiving data to the IotHook service.
+      it aims to carry out tests.
 
-      29 Temmuz 2017
-      Guncelleme: 19 Agustos 2019
+      29 July 2017
+      Update: 19 August 2019
       Sahin MERSIN
 
-      Daha fazlasi icin
+      For more
 
       http://www.iothook.com
-      ve
+      and
       https://github.com/electrocoder/iotHook
 
-      sitelerine gidiniz.
+      go to theese sites
 
-      Sorular ve destek talepleri icin
+      For questions and support requests
       https://github.com/electrocoder/iotHook/issues
-      sayfasindan veya Meşe Bilişim den yardım alabilirsiniz.
+      you can take support Mese Bilisim or above github page.
 
-      Yayin : http://mesebilisim.com
+      Broadcasting : http://mesebilisim.com
 
       Licensed under the Apache License, Version 2.0 (the "License").
       You may not use this file except in compliance with the License.
@@ -236,7 +237,7 @@ Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
       http://www.apache.org/licenses/
     */
 
-    // demo hesap #24 Temperature sensor
+    // demo account #24 Temperature sensor
 
     var client = new RestClient("https://iothook.com/api/device/?api_key=76d2628fd60903d3c1f7f8a0&results=1");
     var request = new RestRequest(Method.GET);
@@ -251,12 +252,12 @@ Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
     IRestResponse response = client.Execute(request);
 
 
-GO ile IOT Veri Alma
---------------------
+IOT Data Fetching with GO
+-------------------------
 
-IoThook kullanıcısının cihazına ait veriyi alabilmesi için GET metodu kullanılarak Postman ile üretilmiştir.
+It has been produced with the GET method using Postman so that the IoThook user can use the data of his device.
 
-Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
+You can find this example and others on the `IOTHOOK Git`_ page.
 
 .. code-block:: go
 
@@ -293,13 +294,12 @@ Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
 
     }
 
+IOT Data Fetching with JAVA
+---------------------------
 
-JAVA ile IOT Veri Alma
-----------------------
+It has been produced with the GET method using Postman so that the IoThook user can use the data of his device.
 
-IoThook kullanıcısının cihazına ait veriyi alabilmesi için GET metodu kullanılarak Postman ile üretilmiştir.
-
-Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
+You can find this example and others on the `IOTHOOK Git`_ page.
 
 .. code-block:: java
 
@@ -320,13 +320,12 @@ Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
 
     Response response = client.newCall(request).execute();
 
+IOT Data Fetching with PHP
+--------------------------
 
-PHP ile IOT Veri Alma
----------------------
+It has been produced with the GET method using Postman so that the IoThook user can use the data of his device.
 
-IoThook kullanıcısının cihazına ait veriyi alabilmesi için GET metodu kullanılarak Postman ile üretilmiştir.
-
-Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
+You can find this example and others on the `IOTHOOK Git`_ page.
 
 .. code-block:: php
 
@@ -360,13 +359,12 @@ Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
       echo $ex;
     }
 
+IOT Data Fetching with Ruby
+---------------------------
 
-Ruby ile IOT Veri Alma
-----------------------
+It has been produced with the GET method using Postman so that the IoThook user can use the data of his device.
 
-IoThook kullanıcısının cihazına ait veriyi alabilmesi için GET metodu kullanılarak Postman ile üretilmiştir.
-
-Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
+You can find this example and others on the `IOTHOOK Git`_ page.
 
 .. code-block:: ruby
 
@@ -391,12 +389,12 @@ Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
     puts response.read_body
 
 
-Javascript Ajax ile IOT Veri Alma
----------------------------------
+IOT Data Fetching with Javascript Ajax
+--------------------------------------
 
-IoThook kullanıcısının cihazına ait veriyi alabilmesi için GET metodu kullanılarak Postman ile üretilmiştir.
+It has been produced with the GET method using Postman so that the IoThook user can use the data of his device.
 
-Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
+You can find this example and others on the `IOTHOOK Git`_ page.
 
 .. code-block:: javascript
 
@@ -421,12 +419,10 @@ Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
       console.log(response);
     });
 
+IOT Data Fetching with Python PySide2
+-------------------------------------
 
-Python PySide2 ile IOT Veri Alma
----------------------------------
-
-PySide2, Qt nin Python projelerinde Qt 5.12+ framework e erişimini sağlayan resmi Python modülüdür. PySide2 yi
-kullanmadan önce yüklenmesi gereken modüller şu şekildedir.
+PySide2 is the official Python module that provides access to the Qt 5.12+ framework for Python projects. Before using PySide2, the following modules need to be installed
 
     $ pip install matplotlib
 
@@ -434,36 +430,34 @@ kullanmadan önce yüklenmesi gereken modüller şu şekildedir.
 
     $ pip install PySide2
 
-Python kütüphanelerinin yükleme işlemi pip ile yapılmıştır. Sisteminizde pip yüklü değil ise https://bootstrap.pypa.io/get-pip.py
-adresine giderek dosyayı bilgisayarınıza kaydediniz ve çalıştırınız.
+The installation of Python libraries has been done using pip. If pip is not installed on your system, you can visit the following address, https://bootstrap.pypa.io/get-pip.py, to download the file to your computer and run it.
 
-Biz burada PySide2 ve matplotlib kullanarak oluşturduğumuz Window içerisinde gelen verileri grafik olarak göstereceğiz.
+Here, we will use PySide2 and Matplotlib to display the incoming data as a graph within a Window.
 
-Script çalıştırıldığında aşağıdaki gibi bir pencere görmemiz gerekiyor.
+When the script is executed, we should see a window like the one shown below.
 
 .. figure:: _static/pyside2-matplotlib-iothook.png
    :alt: pyside2-matplotlib-iothook.png
    :align: center
 
-Bu örnekde *QT Designer* kullanılarak arayüz tasarımı yapılmıştır. Widget için *Promote to ...* seçeneği ile *MplWidget*
-sınıfı kullanılmıştır. Bu örneği hazırlamada *manap.se* `Manap`_ ve *yapayzekalabs.blogspot.com* `Yapayzekalabs`_
-sitelerinden faydalandım. Bu sitelerde daha fazla kaynak bulabilirsiniz.
+In this example, the interface design was created using *QT Designer*. For the widget,*Promote to ...* option was used with the *MplWidget* class. In prepearing this example *manap.se* `Manap`_ and *yapayzekalabs.blogspot.com* `Yapayzekalabs`_
+used this sites. You can find more resources at these sites.
 
 .. _Manap: https://blog.manap.se/pyqt/bolum3/plot.html
 .. _Yapayzekalabs: http://yapayzekalabs.blogspot.com/2018/11/pyside2-gui-qt-designer-matplotlib.html
 
-Test işlemi IoThook da bulunan *230* id numaralı *5 channel test* isimli cihaz ile yapılmıştır.
- Bu cihaz demo kullanıcısına aittir.
+The test process was carried out with a device named *5 channel test* with id number *230* in IoThook.
+ This device belongs to demo user
 
-Bu örneğe ve diğerlerine `IOTHOOK Git`_ sayfasından ulaşabilirsiniz.
+You can find this example and others on the `IOTHOOK Git`_ page.
 
-iothook.ui dosyası:
+iothook.ui folder:
 
 .. highlight:: xml
 .. literalinclude:: /../../examples/http/python/pyside2/iothook.ui
     :caption: iothook.ui
 
-iothook.py dosyası:
+iothook.py folder:
 
 .. highlight:: python
 .. literalinclude:: /../../examples/http/python/pyside2/iothook.py
