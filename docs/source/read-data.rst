@@ -25,56 +25,10 @@ You can find this example and others on the `IOTHOOK Git`_ page.
 
 .. _IOTHOOK Git: https://github.com/electrocoder/iothookdoc/tree/main/examples/
 
-.. code-block:: python
-
-    # -*- coding: utf-8 -*-
-
-    """
-       IoThook REST Api Test with Python 2, Python 3 
-
-      This example is at the beginner level for sending/receiving data to the IotHook service.
-      it aims to carry out tests.
-
-      10 May 2017
-      Update: 19 August 2019
-      Sahin MERSIN
-
-      For more
-
-      http://www.iothook.com
-      and
-      https://github.com/electrocoder/iotHook
-
-      go to theese sites
-
-      For questions and support requests
-      https://github.com/electrocoder/iotHook/issues
-      you can take support Mese Bilisim or above github page.
-      
-
-      Broadcasting : http://mesebilisim.com
-
-
-      Licensed under the Apache License, Version 2.0 (the "License").
-      You may not use this file except in compliance with the License.
-      A copy of the License is located at
-
-      http://www.apache.org/licenses/
-
-    """
-
-    import requests
-
-    # read api key
-    API_KEY = 'ceb0024b84ff6fb7527d5506' # demo account #17 random test
-
-    url = 'http://iothook.com/api/device/?api_key=' + API_KEY + "&results=1"
-
-    response = requests.get(url)
-    data = response.json()
-    print(data)
-    print(len(data))
-    print(data[0]['id'])
+.. highlight:: py
+.. literalinclude:: /../../examples/http/python/get_json.py
+    :caption: get_json.py
+    :name: get_json.py
 
 Getting the First Data with Python 2, Python 3 Json
 ---------------------------------------------------
@@ -83,59 +37,10 @@ Python Getting the First Data, Get Example with Json:
 
 You can find this example and others on the `IOTHOOK Git`_ page.
 
-.. code-block:: python
-
-    # -*- coding: utf-8 -*-
-
-    """
-      IoThook REST Api Test with Python 2, Python 3 
-
-      This example is at the beginner level for sending/receiving data to the IotHook service.
-      it aims to carry out tests.
-
-      10 May 2017
-      Update: 19 August 2019
-      Sahin MERSIN
-
-      For more
-
-      http://www.iothook.com
-      and
-      https://github.com/electrocoder/iotHook
-
-      go to theese sites
-
-  
-      For questions and support requests
-      https://github.com/electrocoder/iotHook/issues
-      you can take support Mese Bilisim or above github page.
-      
-
-      Broadcasting : http://mesebilisim.com
-
-      Licensed under the Apache License, Version 2.0 (the "License").
-      You may not use this file except in compliance with the License.
-      A copy of the License is located at
-
-      http://www.apache.org/licenses/
-
-    """
-
-    import requests
-
-    # read api key
-    API_KEY = '76d2628fd60903d3c1f7f8a0' # demo account #24 Temperature sensor
-
-    url = 'https://iothook.com/api/device/?api_key=' + API_KEY + "&results=2"
-
-    response = requests.get(url)
-    data = response.json()
-    print(data)
-    print(data['datas'][0]['id'])
-    print(data['datas'][0]['pub_date'])
-    print(data['datas'][1]['id'])
-    print(data['datas'][1]['pub_date'])
-
+.. highlight:: py
+.. literalinclude:: /../../examples/http/python/request_get.py
+    :caption: request_get.py
+    :name: request_get.py
 
 Getting the Last Data with Python 2, Python 3 Json
 --------------------------------------------------
@@ -144,56 +49,10 @@ Python Getting the Last Data, Get Example with Json:
 
 You can find this example and others on the `IOTHOOK Git`_ page.
 
-.. code-block:: python
-
-    # -*- coding: utf-8 -*-
-
-    """
-        IoThook REST Api Test with Python 2, Python 3 
-
-      This example is at the beginner level for sending/receiving data to the IotHook service.
-      it aims to carry out tests.
-
-      10 May 2017
-      Update: 19 August 2019
-      Sahin MERSIN
-
-      For more
-
-      http://www.iothook.com
-      and
-      https://github.com/electrocoder/iotHook
-
-      go to theese sites
-
-      For questions and support requests
-      https://github.com/electrocoder/iotHook/issues
-      
-      you can take support Mese Bilisim or above github page.
-      Broadcasting : http://mesebilisim.com
-
-      Licensed under the Apache License, Version 2.0 (the "License").
-      You may not use this file except in compliance with the License.
-      A copy of the License is located at
-
-      http://www.apache.org/licenses/
-
-    """
-
-    import requests
-
-    # read api key
-    API_KEY = '76d2628fd60903d3c1f7f8a0' # demo account #24 Temperature sensor
-
-    url = 'https://iothook.com/api/device/?api_key=' + API_KEY
-
-    response = requests.get(url)
-    data = response.json()
-    print(data)
-    print(data['datas'][0]['id'])
-    print(data['datas'][0]['pub_date'])
-
-
+.. highlight:: py
+.. literalinclude:: /../../examples/http/python/request_get_last_data.py
+    :caption: request_get_last_data.py
+    :name: request_get_last_data.py
 
 Fetching Data in JSON Format with C#
 ------------------------------------
@@ -202,55 +61,10 @@ It has been produced with the GET method using Postman so that the IoThook user 
 
 You can find this example and others on the `IOTHOOK Git`_ page.
 
-.. code-block:: c#
-
-    /*
-      Testing IoThook REST Api with C#
-
-      In this example, device data is retrieved with CSharp with the get method.
-
-      This example is at the beginner level for sending/receiving data to the IotHook service.
-      it aims to carry out tests.
-
-      29 July 2017
-      Update: 19 August 2019
-      Sahin MERSIN
-
-      For more
-
-      http://www.iothook.com
-      and
-      https://github.com/electrocoder/iotHook
-
-      go to theese sites
-
-      For questions and support requests
-      https://github.com/electrocoder/iotHook/issues
-      you can take support Mese Bilisim or above github page.
-
-      Broadcasting : http://mesebilisim.com
-
-      Licensed under the Apache License, Version 2.0 (the "License").
-      You may not use this file except in compliance with the License.
-      A copy of the License is located at
-
-      http://www.apache.org/licenses/
-    */
-
-    // demo account #24 Temperature sensor
-
-    var client = new RestClient("https://iothook.com/api/device/?api_key=76d2628fd60903d3c1f7f8a0&results=1");
-    var request = new RestRequest(Method.GET);
-    request.AddHeader("cache-control", "no-cache");
-    request.AddHeader("Connection", "keep-alive");
-    request.AddHeader("Accept-Encoding", "gzip, deflate");
-    request.AddHeader("Host", "iothook.com");
-    request.AddHeader("Postman-Token", "ce2f06c2-817e-414a-8c7a-2c2fc59ad043,af31a3d8-02e4-49eb-b78f-05ebdce70149");
-    request.AddHeader("Cache-Control", "no-cache");
-    request.AddHeader("Accept", "*/*");
-    request.AddHeader("User-Agent", "PostmanRuntime/7.15.2");
-    IRestResponse response = client.Execute(request);
-
+.. highlight:: cs
+.. literalinclude:: /../../examples/http/c#/request_get_data.cs
+    :caption: c#/request_get_data.cs
+    :name: c#/request_get_data.cs
 
 IOT Data Fetching with GO
 -------------------------
@@ -259,40 +73,10 @@ It has been produced with the GET method using Postman so that the IoThook user 
 
 You can find this example and others on the `IOTHOOK Git`_ page.
 
-.. code-block:: go
-
-    package main
-
-    import (
-        "fmt"
-        "net/http"
-        "io/ioutil"
-    )
-
-    func main() {
-
-        url := "https://iothook.com/api/device/?api_key=76d2628fd60903d3c1f7f8a0&results=1"
-
-        req, _ := http.NewRequest("GET", url, nil)
-
-        req.Header.Add("User-Agent", "PostmanRuntime/7.15.2")
-        req.Header.Add("Accept", "*/*")
-        req.Header.Add("Cache-Control", "no-cache")
-        req.Header.Add("Postman-Token", "ce2f06c2-817e-414a-8c7a-2c2fc59ad043,8a0938fc-5c87-459a-9b9f-fa6aebe561f2")
-        req.Header.Add("Host", "iothook.com")
-        req.Header.Add("Accept-Encoding", "gzip, deflate")
-        req.Header.Add("Connection", "keep-alive")
-        req.Header.Add("cache-control", "no-cache")
-
-        res, _ := http.DefaultClient.Do(req)
-
-        defer res.Body.Close()
-        body, _ := ioutil.ReadAll(res.Body)
-
-        fmt.Println(res)
-        fmt.Println(string(body))
-
-    }
+.. highlight:: go
+.. literalinclude:: /../../examples/http/go/request_get_data.go
+    :caption: request_get_data.go
+    :name: request_get_data.go
 
 IOT Data Fetching with JAVA
 ---------------------------
@@ -301,24 +85,10 @@ It has been produced with the GET method using Postman so that the IoThook user 
 
 You can find this example and others on the `IOTHOOK Git`_ page.
 
-.. code-block:: java
-
-    OkHttpClient client = new OkHttpClient();
-
-    Request request = new Request.Builder()
-      .url("https://iothook.com/api/device/?api_key=76d2628fd60903d3c1f7f8a0&results=1")
-      .get()
-      .addHeader("User-Agent", "PostmanRuntime/7.15.2")
-      .addHeader("Accept", "*/*")
-      .addHeader("Cache-Control", "no-cache")
-      .addHeader("Postman-Token", "ce2f06c2-817e-414a-8c7a-2c2fc59ad043,bdcd2494-5109-4621-8256-296e0c6a4fad")
-      .addHeader("Host", "iothook.com")
-      .addHeader("Accept-Encoding", "gzip, deflate")
-      .addHeader("Connection", "keep-alive")
-      .addHeader("cache-control", "no-cache")
-      .build();
-
-    Response response = client.newCall(request).execute();
+.. highlight:: java
+.. literalinclude:: /../../examples/http/java/request_get_data.java
+    :caption: request_get_data.java
+    :name: request_get_data.java
 
 IOT Data Fetching with PHP
 --------------------------
@@ -327,37 +97,10 @@ It has been produced with the GET method using Postman so that the IoThook user 
 
 You can find this example and others on the `IOTHOOK Git`_ page.
 
-.. code-block:: php
-
-    <?php
-
-    $request = new HttpRequest();
-    $request->setUrl('https://iothook.com/api/device/');
-    $request->setMethod(HTTP_METH_GET);
-
-    $request->setQueryData(array(
-      'api_key' => '76d2628fd60903d3c1f7f8a0',
-      'results' => '1'
-    ));
-
-    $request->setHeaders(array(
-      'cache-control' => 'no-cache',
-      'Connection' => 'keep-alive',
-      'Accept-Encoding' => 'gzip, deflate',
-      'Host' => 'iothook.com',
-      'Postman-Token' => 'ce2f06c2-817e-414a-8c7a-2c2fc59ad043,dfad2e87-d4a1-4657-a5b6-183c4604c818',
-      'Cache-Control' => 'no-cache',
-      'Accept' => '*/*',
-      'User-Agent' => 'PostmanRuntime/7.15.2'
-    ));
-
-    try {
-      $response = $request->send();
-
-      echo $response->getBody();
-    } catch (HttpException $ex) {
-      echo $ex;
-    }
+.. highlight:: php
+.. literalinclude:: /../../examples/http/php/request_get_data.php
+    :caption: request_get_data.php
+    :name: request_get_data.php
 
 IOT Data Fetching with Ruby
 ---------------------------
@@ -366,28 +109,10 @@ It has been produced with the GET method using Postman so that the IoThook user 
 
 You can find this example and others on the `IOTHOOK Git`_ page.
 
-.. code-block:: ruby
-
-    require 'uri'
-    require 'net/http'
-
-    url = URI("https://iothook.com/api/device/?api_key=76d2628fd60903d3c1f7f8a0&results=1")
-
-    http = Net::HTTP.new(url.host, url.port)
-
-    request = Net::HTTP::Get.new(url)
-    request["User-Agent"] = 'PostmanRuntime/7.15.2'
-    request["Accept"] = '*/*'
-    request["Cache-Control"] = 'no-cache'
-    request["Postman-Token"] = 'ce2f06c2-817e-414a-8c7a-2c2fc59ad043,8fe93ff6-b857-4978-838e-2d8efac2e6b6'
-    request["Host"] = 'iothook.com'
-    request["Accept-Encoding"] = 'gzip, deflate'
-    request["Connection"] = 'keep-alive'
-    request["cache-control"] = 'no-cache'
-
-    response = http.request(request)
-    puts response.read_body
-
+.. highlight:: rb
+.. literalinclude:: /../../examples/http/ruby/request_get_data.rb
+    :caption: request_get_data.rb
+    :name: request_get_data.rb
 
 IOT Data Fetching with Javascript Ajax
 --------------------------------------
@@ -396,28 +121,10 @@ It has been produced with the GET method using Postman so that the IoThook user 
 
 You can find this example and others on the `IOTHOOK Git`_ page.
 
-.. code-block:: javascript
-
-    var settings = {
-      "async": true,
-      "crossDomain": true,
-      "url": "https://iothook.com/api/device/?api_key=76d2628fd60903d3c1f7f8a0&results=1",
-      "method": "GET",
-      "headers": {
-        "User-Agent": "PostmanRuntime/7.15.2",
-        "Accept": "*/*",
-        "Cache-Control": "no-cache",
-        "Postman-Token": "ce2f06c2-817e-414a-8c7a-2c2fc59ad043,27a5bb35-4b13-48b2-8dbd-efe7188a68c6",
-        "Host": "iothook.com",
-        "Accept-Encoding": "gzip, deflate",
-        "Connection": "keep-alive",
-        "cache-control": "no-cache"
-      }
-    }
-
-    $.ajax(settings).done(function (response) {
-      console.log(response);
-    });
+.. highlight:: js
+.. literalinclude:: /../../examples/http/javascript/request_get_data.js
+    :caption: request_get_data.js
+    :name: request_get_data.js
 
 IOT Data Fetching with Python PySide2
 -------------------------------------
@@ -459,7 +166,7 @@ iothook.ui folder:
 
 iothook.py folder:
 
-.. highlight:: python
+.. highlight:: py
 .. literalinclude:: /../../examples/http/python/pyside2/iothook.py
     :caption: iothook.py
 
